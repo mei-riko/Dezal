@@ -1,24 +1,27 @@
 $white                : #ffffff;
-$black                : #16181F;
+$black                : #1E1E1E;
 $red                  : #EF002B;
+$yellow               : #FFDD2D;
 
-$light-grey           : #fefefe;
-$grey                 : #ADADAD;
-$dark-grey            : #1D1F26;
+$light-grey           : #F9FAFB;
+$grey                 : #B7B7B7;
+$dark-grey            : #1E1E1E;
 
-$border-color         : #fefefe;
+$border-color         : #ECEEF0;
 $body-color           : $black;
 
-$bg-main              : $white;
-$bg-secondary         : #2D3039;
+$text-grey            : #757575;
 
-$link-color           : $grey !default;
+$bg-main              : $white;
+$bg-secondary         : #ECEEF0;
+
+$link-color           : $black !default;
 $link-hover-color     : $red !default;
 $link-decoration      : none !default;
 $link-hover-decoration: underline !default;
 
 $grid-columns         : 12 !default;
-$grid-gutter-width    : 30px !default;
+$grid-gutter-width    : 20px !default;
 
 $grid-breakpoints: (
   xs: 576px,
@@ -32,23 +35,23 @@ $container-max-widths: (
   sm: 540px,
   md: 740px,
   lg: 960px,
-  xl: 1340px,
+  xl: 1200px,
 ) !default;
 
 $font-size-base       : 1rem;
-$font-weight-base     : 200;
+$font-weight-base     : 400;
 $line-height-base     : 1.4;
 
-$font-family-heading  : 'Oswald', sans-serif;
-$font-family-base     : "Lato",    "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-heading  : "Roboto Slab", sans-serif;
+$font-family-base     : "Open Sans", "Helvetica Neue", Arial,  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation Mono",   "Courier New",    monospace !default;
 
 $font-size: (
-  xs: 0,
-  sm: 14px,
+  xs: 11px,
+  sm: 12px,
   md: 14px,
-  lg: 16px,
-  xl: 16px
+  lg: 14px,
+  xl: 15px
 ) !default;
 
 $font-weight-heading: 700;
@@ -56,24 +59,24 @@ $font-weight-heading: 700;
 $font-weight-light  : 300;
 $font-weight        : 400;
 $font-weight-bolder : 600;
-$font-weight-bold   : 800;
+$font-weight-bold   : 700;
 
-$line-height        : 1.6;
-$line-height-heading: 1.1;
+$line-height        : 1.7;
+$line-height-heading: 1.2;
 
 $dt-font-weight: $font-weight-bold !default;
 
-$spacer : 30px!default;
+$spacer : 20px!default;
 $spacers: ()  !default;
 // stylelint-disable-next-line scss/dollar-variable-default
 $spacers: map-merge(
   (
     0: 0,
-    1: $spacer/2,         // 15px
-    2: $spacer,           // 30px
-    3: ($spacer * 1.5),   // 40px
-    4: ($spacer * 2),     // 60px
-    5: ($spacer * 3)      // 90px
+    1: ($spacer * 0.75),  // 15px
+    2: $spacer,           // 20px
+    3: ($spacer * 2),     // 40px
+    4: ($spacer * 3),     // 60px
+    5: ($spacer * 4)      // 80px
   ),
   $spacers
 );

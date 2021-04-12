@@ -1,0 +1,5 @@
+.list-col{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: map-get($map: $spacers, $key: 3);
+}

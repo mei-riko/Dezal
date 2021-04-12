@@ -1,0 +1,15 @@
+.content{
+    width: 920px;
+    max-width: 100%;
+    
+    ul{
+        @extend .list;
+        li{
+            @extend .list__item;
+        }
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}

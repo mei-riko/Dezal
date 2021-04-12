@@ -1,0 +1,73 @@
+.footer{
+    background: $black;
+    color: $grey;
+
+    font-size: map-get($map: $font-size, $key: "sm");
+    padding: map-get($map: $spacers, $key: 3);
+
+    &__title{
+        font-size: map-get($map: $font-size, $key: "xs");
+        font-weight: $font-weight-bolder;
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__item{
+        margin-bottom: map-get($map: $spacers, $key: 1);
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__link{
+        color: $grey;
+
+        &:hover{
+            color: $white;
+        }
+    }
+    &__contact{
+        display: flex;
+        flex-direction: column;
+
+        text-align: right;
+    }
+    &__phone{
+        font-size: 22px;
+        color: $white;
+
+        &:hover{
+            color: $yellow;
+            text-decoration: none;
+        }
+    }
+    &__callback{
+        font-weight: $font-weight-bold;
+
+        margin-bottom: map-get($map: $spacers, $key: 2);
+        text-decoration: underline;
+        color: $grey;
+
+        &:hover{
+            color: $yellow;
+        }
+    }
+    &__text{
+        font-size: map-get($map: $font-size, $key: "sm");
+    }
+    &__networks{
+        margin-top: map-get($map: $spacers, $key: 1);
+        margin-left: -$spacer/2;
+        margin-right: -$spacer/2;
+
+        &-item{
+            padding: 0 $spacer/2;
+        }
+        &-icon{
+            fill: $grey;
+            transition: .3s;
+
+            &:hover{
+                fill: $white;
+            }
+        }
+    }
+}

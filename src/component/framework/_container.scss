@@ -1,6 +1,6 @@
 .container {
   max-width: 100%;
-  width: map-get($container-max-widths, 'hd');
+  width: map-get($container-max-widths, 'xl');
   padding-right: $spacer/2;
   padding-left: $spacer/2;
   margin-right: auto;

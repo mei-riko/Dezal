@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__item{
+        padding-right: map-get($map: $spacers, $key: 3);
+
+        &:last-child{
+            padding-right: 0;
+        }
+
+        &_has-child{
+            &:after{
+                content:'';
+                display: inline-block;
+
+                width: 8px;
+                height: 6px;
+                margin-left: 6px;
+
+                background: url('../icon/arrow-down.svg') no-repeat center / contain;
+            }
+        }
+    }
+}

@@ -45,13 +45,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0; // 1
-  font-family: $font-family-base;
+  font-family: $font-family-base$font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;
   text-align: left; // 3
-  background: $body-bg; // 2
+  background: $bg-main; // 2
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -151,7 +151,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
+  font-weight: $font-weight-bold; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
 small {

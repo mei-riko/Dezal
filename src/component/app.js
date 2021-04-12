@@ -1,14 +1,6 @@
 import $ from 'jquery'
-$(document).ready(() =>{
-  $(".scroll").click(function() {
-    $("html, body").animate({
-       scrollTop: $($(this).attr("href")).offset().top + "px"
-    }, {
-       duration: 500,
-       easing: "swing"
-    });
-    return false;
-  });
+$(function() {
+
   // Input mask
   if( $('.phone').length > 0 ) {
     $(".phone").inputmask({
@@ -37,13 +29,26 @@ $(document).ready(() =>{
   });
 
   // Modal
-  $('[data-fancybox]').fancybox({
-    autoFocus: false
-  });
-  // Отмена стандартного поведения ссылки
-  $('a[data-trigger="click"]').click(function(e){
+  if( $('[data-fancybox]').length > 0 ){
+    $('[data-fancybox]').fancybox({
+      autoFocus: false
+    });
+  }
+
+  // Нестандартное поведение ссылок
+  $('a[data-trigger="click"]').on("click", function(e){
     e.preventDefault();
   })
+  $(".scroll").on("click", function() {
+    $("html, body").animate({
+       scrollTop: $($(this).attr("href")).offset().top + "px"
+    }, {
+       duration: 500,
+       easing: "swing"
+    });
+    return false;
+  });
+
   // Раскрытие блока
   $('.toggle-item').on("click", function(e){
     e.preventDefault();
@@ -102,38 +107,4 @@ $(document).ready(() =>{
       ]
     });
   }
-	// Mobile Navbar
-  $(".navbar-toggle#nav").on("click", function(e){
-		e.preventDefault();
-    let navbar = $(".navbar-collapse");
-		if( !navbar.hasClass("navbar-collapse--active")){
-			navbar.addClass("navbar-collapse--active");
-			$(".navbar-overlay").addClass("navbar-overlay--active");
-		}else{
-			navbar.removeClass("navbar-collapse--active");
-			$(".navbar-overlay").removeClass("navbar-overlay--active");
-		}
-  });
-  $(".navbar-close").on("click", function(e){
-    e.preventDefault();
-    $(".navbar-collapse").removeClass("navbar-collapse--active");
-    $(".navbar-overlay").removeClass("navbar-overlay--active");
-  });
-  $(document).mouseup(function (e){ // событие клика по веб-документу
-    let dropdownActive = $(".navbar-collapse.navbar-collapse--active"); // элемент
-    if (!dropdownActive.is(e.target) // клик был не по блоку
-          // && dropdownActive.has(e.target).length === 0 // и не по его дочерним элементам
-          && !$(".navbar-toggle#nav").is(e.target) ) { 
-              $(".navbar-collapse").removeClass("navbar-collapse--active");
-              $(".navbar-overlay").removeClass("navbar-overlay--active");
-            }
-  });
-  // Hide Navigation on Desktop
-  $(window).resize(function(){
-    if ( $(window).width() > 991 || !window.matchMedia('screen and (max-width: 992px)').matches ){
-      $(".navbar-toggle").removeClass("navbar-toggle--active");
-        $(".navbar-collapse").removeClass("navbar-collapse--active");
-        $(".navbar-overlay").removeClass("navbar-overlay--active");
-    }
-  });
 });

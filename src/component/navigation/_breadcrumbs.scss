@@ -1,0 +1,28 @@
+.breadcrumbs{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: map-get($map: $font-size, $key: "xs");
+    color: $grey;
+
+    &__link{
+        color: $grey;
+        text-decoration: underline;
+    }
+    &__item{
+        padding-right: 10px;
+
+        &:after{
+            content: '/';
+            margin-left: 10px;
+        }
+
+        &:last-child{
+            padding-right: 0;
+            &:after{
+                display: none;
+            }
+        }
+    }
+}
