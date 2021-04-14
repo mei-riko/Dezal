@@ -10,6 +10,10 @@
             padding-right: 0;
         }
 
+        &:hover{
+            text-decoration: none;
+        }
+
         &_has-child{
             &:after{
                 content:'';

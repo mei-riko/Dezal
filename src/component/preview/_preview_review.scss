@@ -52,7 +52,7 @@
         padding: $spacer $spacer 0;
         font-size: map-get($map: $font-size, $key: "xl");
         font-weight: $font-weight-bolder;
-        margin-bottom: $spacer/2;
+        margin-bottom: 0;
     }
     &__rating{
         display: flex;
