@@ -1,0 +1,27 @@
+.toggle{
+    &__title{
+        padding: map-get($map: $spacers, $key: 1);
+        cursor: pointer;
+        transition: .3s;
+        
+        &_page{
+            font-size: map-get($map: $font-size, $key: "md");
+            text-align: center;
+            background-color: $bg-dark;
+            color: $border-color;
+
+            &.toggle__title--active{
+                background-color: darken($color: $bg-dark, $amount: 5);
+            }
+        }
+    }
+    &__content{
+        display: none;
+        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 1);
+
+        &_page{
+            background-color: $bg-dark;
+            color: $white;
+        }
+    }
+}

@@ -2,6 +2,7 @@ $white                : #ffffff;
 $black                : #1E1E1E;
 $red                  : #EF002B;
 $yellow               : #FFDD2D;
+$blue                 : #336FEE;
 
 $light-grey           : #F9FAFB;
 $grey                 : #B7B7B7;
@@ -14,6 +15,7 @@ $text-grey            : #757575;
 
 $bg-main              : $white;
 $bg-secondary         : #ECEEF0;
+$bg-dark              : #4B4B4B;
 
 $link-color           : $black !default;
 $link-hover-color     : $red !default;
@@ -49,9 +51,9 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,   "Liberation M
 $font-size: (
   xs: 11px,
   sm: 12px,
-  md: 14px,
+  md: 13px,
   lg: 14px,
-  xl: 15px
+  xl: 16px
 ) !default;
 
 $font-weight-heading: 700;

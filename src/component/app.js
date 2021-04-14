@@ -1,9 +1,11 @@
-import $ from 'jquery'
+import $ from 'jquery';
+import '../component/tabs/tabs';
+
 $(function() {
 
   // Input mask
-  if( $('.phone').length > 0 ) {
-    $(".phone").inputmask({
+  if( $('.input_phone').length > 0 ) {
+    $(".input_phone").inputmask({
       mask: "+7 999 999 99 99",
       placeholder: " ",
       showMaskOnHover: true,
@@ -20,7 +22,7 @@ $(function() {
       },
     })
   }
-  $('input.phone').on('keydown', function(event) {
+  $('input.input_phone').on('keydown', function(event) {
     if (event.keyCode === 13 && !$(this).inputmask("isComplete") ) {
       event.preventDefault();
       $(this).blur();
@@ -50,58 +52,60 @@ $(function() {
   });
 
   // Раскрытие блока
-  $('.toggle-item').on("click", function(e){
+  $('.toggle .toggle__title').on("click", function(e){
     e.preventDefault();
     let toggle = $(this);
-    if( !toggle.hasClass("toggle-item--active")){
-      toggle.addClass("toggle-item--active");
-      toggle.find(".toggle-item__title").addClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideDown();
+    let textShow = $(this).data("show");
+    let textHide = $(this).data("hide");
+
+    if( !toggle.hasClass("toggle__title--active")){
+      toggle.addClass("toggle__title--active");
+      toggle.closest("toggle").addClass("toggle--active");
+      toggle.next(".toggle__content").slideDown();
+
+      toggle.text( textHide );
+
 		}else{
-			toggle.removeClass("toggle-item--active");
-      toggle.find(".toggle-item__title").removeClass("toggle-item__title--active");
-      toggle.find(".toggle-item__content").slideUp();
+      toggle.removeClass("toggle__title--active");
+      toggle.closest("toggle").removeClass("toggle--active");
+      toggle.next(".toggle__content").slideUp();
+
+      toggle.text( textShow );
     }
   });
   // Слайдер
 	if( $('.slider').length > 0 ){
     // Review Block Col
-    let $slickReview = $('#reviews');
+    let $slickReview = $('.slider.slider_review');
 		$slickReview.slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows      : true,
-			dots        : true,
-      autoplay  : false,
-      responsive: [
+			slidesToShow  : 4,
+			slidesToScroll: 4,
+      infinite      : false,
+      arrows        : true,
+			dots          : false,
+      autoplay      : false,
+      responsive    : [
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            infinite: true,
-            arrows: true,
-            dots: true
+            slidesToShow: 3,
+            slidesToScroll: 3,
           }
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            arrows: false,
-            dots: true
+            slidesToShow: 2,
+            slidesToScroll: 2,
           }
         },
         {
           breakpoint: 480,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
             arrows: false,
-            dots: true
+            dots: true,
           }
         }
       ]

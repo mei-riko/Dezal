@@ -1,0 +1,77 @@
+.preview_review{
+    display: grid;
+    grid-gap: $spacer;
+    grid-template-columns: 100px 1fr 160px;
+
+    align-items: center;
+
+    border: 1px solid $border-color;
+    padding: $spacer $spacer*1.5;
+
+    &__content{
+        padding: 0 $spacer;
+
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 60px 1fr;
+        grid-template-areas: 
+            "value rating"
+            "value info";
+    }
+    &__value{
+        grid-area: value;
+        font-size: 36px;
+        line-height: 1;
+    }
+    &__stars{
+        grid-area: rating;
+        display: flex;
+        flex-wrap: nowrap;
+
+        &-item{
+            fill: $yellow;
+            width: 14px;
+            padding-right: 2px;
+        }
+    }
+    &__info{
+        grid-area: info;
+        font-size: 10px;
+        white-space: nowrap;
+        color: $text-grey;
+    }
+    &__btn{
+        min-width: 160px;
+    }
+}
+.preview_review-item{
+    padding: 0;
+    border: 1px solid $border-color;
+
+    &__title{
+        padding: $spacer $spacer 0;
+        font-size: map-get($map: $font-size, $key: "xl");
+        font-weight: $font-weight-bolder;
+        margin-bottom: $spacer/2;
+    }
+    &__rating{
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 0 $spacer $spacer;
+    }
+    &__stars{
+        display: flex;
+        flex-wrap: nowrap;
+        padding-left: $spacer/4;
+
+        &-item{
+            fill: $yellow;
+            width: 14px;
+            padding-right: 2px;
+        }
+    }
+    &__image{
+        height: 240px;
+        background: no-repeat top center / cover;
+    }
+}

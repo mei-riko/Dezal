@@ -1,14 +1,17 @@
 .input{
-    background-color: inherit;
-    color: $white;
+    background-color: $white;
+    color: $black;
     border: 1px solid $border-color;
-    padding: $spacer/3 $spacer/2;
-    margin-bottom: $spacer/3;
+    
+    font-size: 13px;
+    line-height: 16px;
+    
+    padding: 14px 24px;
     transition: .4s;
 
     &::placeholder{
         transition: .4s;
-        color: $grey;
+        color: $text-grey;
     }
     &:hover, &:focus{
         border-color: $border-color;

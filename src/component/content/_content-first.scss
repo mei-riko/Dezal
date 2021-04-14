@@ -1,0 +1,20 @@
+.content-first{
+    overflow: hidden;
+    padding: map-get($map: $spacers, $key: 5);
+    &__image{
+        position: absolute;
+        left: 0;
+        bottom: -(map-get($map: $spacers, $key: 5));
+
+        width: 420px;
+        height: auto;
+
+        z-index: 11;
+    }
+    &__sign{
+        position: absolute;
+        top: -(map-get($map: $spacers, $key: 2));
+        right: -(map-get($map: $spacers, $key: 5));
+        z-index: 9;
+    }
+}

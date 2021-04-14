@@ -3,14 +3,20 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        title Basic Page
+        title Дезинсекция
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
-
+        include component/mixin.pug
+        
+        section.container.pb-3
+            .content        
+                p Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.
+                p Velit, sed quia non provident, similique sunt in culpa, qui dolorem. Ducimus, qui dolorem ipsum, quia. Quibusdam et accusamus et accusamus et quas. Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.
+                
         include component/footer/footer.pug
         script(src="./js/jquery.inputmask.js")
         script(src="./js/app.min.js")

@@ -1,0 +1,61 @@
+.tabs{
+    &__nav{
+        margin-bottom: map-get($map: $spacers, $key: 3);
+        width: 100%;
+
+        &_service{
+            display: grid;
+            grid-gap: 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        &-item{
+            font-family: $font-family-heading;
+            font-size: map-get($map: $font-size, $key: "sm");
+            font-weight: $font-weight-bold;
+            line-height: 1;
+            text-transform: uppercase;
+            text-align: center;
+
+            padding: 14px 24px;
+            border: 1px solid $border-color;
+            transition: .3s;
+
+            cursor: pointer;
+
+            &:hover{
+                background-color: $border-color;
+            }
+
+            &--active{
+                background-color: $black;
+                border-color: $black;
+                color: $white;
+
+                cursor: default;
+
+                &:hover{
+                    background-color: $black;
+                    border-color: $black;
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__content{
+        display: none;
+
+        &--active{
+            display: block;
+        }
+
+        &_service{
+            grid-gap: $spacer;
+            flex-wrap: wrap;
+
+            &.tabs__content--active{
+                display: flex;
+            }
+        }
+    }
+}

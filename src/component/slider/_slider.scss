@@ -1,1 +1,33 @@
-.slider{}
+.slider{
+    &__item{
+        outline: none;
+        height: auto;
+    }
+
+    .slick-arrow{
+        color: $black;
+        background-color: $light-grey;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 11;
+
+        &:before{
+            color: $black;
+        }
+
+        &.slick-prev{
+            left: $spacer;
+        }
+        &.slick-next{
+            right: $spacer;
+        }
+        &.slick-disabled{
+            opacity: 0;
+        }
+        &:hover{
+            color: $black;
+            background-color: $light-grey;
+        }
+    }
+}

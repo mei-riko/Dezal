@@ -12,14 +12,16 @@ html(lang="ru")
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         //- include component/header/header.pug
+        include component/mixin.pug
         main 
             section.container.text-center.mt-5.mb-5
                 img.img-fluid.mb-5(src="./icon/logo-full.svg" alt="" title="" width="120px")
                 h1.heading-error 404
                 p.lead.text-bolder.mb-0 Такой страницы нет
                 p Но есть много других полезных страниц 
-            include component/preview/sales.pug
-        include component/form/form-cta.pug
+            aside.container
+                include component/preview/sales.pug
+        include component/form/form-ctaConsultation.pug
         include component/footer/footer.pug
 
         link(href="./css/jquery.fancybox.min.css", rel='stylesheet')

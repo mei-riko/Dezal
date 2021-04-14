@@ -1,0 +1,10 @@
+.btn_details{
+    border-color: $bg-secondary;
+    background: $bg-secondary;
+    color: $blue;
+
+    &:hover, &:focus{
+        background: darken($color: $bg-secondary, $amount: 5);
+        color: $blue;
+    }
+}

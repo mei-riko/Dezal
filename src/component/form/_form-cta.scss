@@ -1,0 +1,45 @@
+.form-cta{
+    position: relative;
+    padding: map-get($map: $spacers, $key: 4) 0;
+    margin-top: map-get($map: $spacers, $key: 4);
+
+    &__intro{
+        width: 540px;
+        max-width: 100%;
+    }
+    &__form{
+        width: 700px;
+        max-width: 100%;
+    }
+    &__image{
+        position: absolute;
+        max-width: 100%;
+
+        &_consultation{
+            left: 40px;
+            bottom: -60px;
+            width: 275px;
+            height: 310px;
+    
+            background: url('../img/phone.png') no-repeat center bottom / contain;
+        }
+        &_order{
+            left: 0px;
+            bottom: -85px;
+            width: 240px;
+            height: calc( 100% + 170px);
+    
+            background: url('../img/cta-order.png') no-repeat center bottom / contain;
+        }
+        
+    }
+    &__icon{
+        position: absolute;
+        left: 50%;
+        bottom: 20px;
+
+        transform: translateX(-50%);
+        width: 130px;
+        height: 130px;
+    }
+}
