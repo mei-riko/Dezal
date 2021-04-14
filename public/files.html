@@ -4,7 +4,9 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title>Basic Page</title>
+    <title>FAQ</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;family=Roboto+Slab:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet"/>
   </head>
   <body>
@@ -24,6 +26,99 @@
         <div class="navbar"><a class="navbar__item navbar__item_has-child" href="catalog.html">Дезинсекция</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Дератизация</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Дезинфекция</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Услуги компании</a><a class="navbar__item" href="contact.html">Контактная информация</a></div>
       </div>
     </header>
+    <section class="container pt-1">
+      <h1 class="mb-0">Полезные файлы</h1>
+      <div class="row">
+        <div class="col-4 mt-3"><img class="img-fluid" src="./img/blog-prev.png"/><a class="text-bold lead d-block mt-2 mb-1" href="text.html">Как подготовить квартиру к дезинсекции?</a>
+          <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lacus massa auctor amet eu in.</p><a class="btn btn_details" href="text.html">Узнать детали</a>
+        </div>
+        <div class="col-4 mt-3"><img class="img-fluid" src="./img/blog-prev.png"/><a class="text-bold lead d-block mt-2 mb-1" href="text.html">Как подготовить квартиру к дезинсекции?</a>
+          <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lacus massa auctor amet eu in.</p><a class="btn btn_details" href="text.html">Подробности</a>
+        </div>
+        <div class="col-4 mt-3"><img class="img-fluid" src="./img/blog-prev.png"/><a class="text-bold lead d-block mt-2 mb-1" href="text.html">Как подготовить квартиру к дезинсекции?</a>
+          <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lacus massa auctor amet eu in.</p><a class="btn btn_details" href="text.html">Подробности</a>
+        </div>
+        <div class="col-4 mt-3"><img class="img-fluid" src="./img/blog-prev.png"/><a class="text-bold lead d-block mt-2 mb-1" href="text.html">Как подготовить квартиру к дезинсекции?</a>
+          <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lacus massa auctor amet eu in.</p><a class="btn btn_details" href="text.html">Узнать детали</a>
+        </div>
+      </div>
+      <div class="pagination mt-3"><a class="pagination__item" href="#">1</a><a class="pagination__item" href="#">2</a><span class="pagination__item pagination__item--active">3</span><a class="pagination__item" href="#">4</a></div>
+    </section>
+    <div class="form-cta bg-secondary">
+      <div class="container">
+        <div class="row"> 
+          <div class="col-7">
+            <p class="h1">Нужна бесплатная консультация?</p>
+            <p class="form-cta__intro">Компания предоставляет услуги по&nbsp;дезинфекции, дезинсекции и&nbsp;дератизации по&nbsp;Санкт-Петербургу более 7 лет. </p>
+            <form class="form form_inline form-cta__form" action="">
+              <input class="input" type="text" placeholder="Ваше имя"/>
+              <input class="input input_phone" type="tel" placeholder="Телефон"/>
+              <button class="btn btn_action" type="submit">Заказать обработку</button>
+            </form>
+          </div>
+          <div class="col-5 p-relative"> 
+            <div class="form-cta__image form-cta__image_consultation"><img class="form-cta__icon" src="./icon/icon-cta.svg"/></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="container pt-4 pb-4">
+      <h4 class="text-uppercase mb-2 pb-1">Актуальные акции</h4>
+      <div class="row"> 
+        <div class="col-4">
+              <div class="preview preview_sale">
+                <p class="preview__title preview__title_sale">С заботой о старших!</p>
+                <p class="preview__intro preview_sale__intro">Пенсионерам скидка 10% на любую услуг.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+              </div>
+        </div>
+        <div class="col-4">
+              <div class="preview preview_sale">
+                <p class="preview__title preview__title_sale">Больше - дешевле!</p>
+                <p class="preview__intro preview_sale__intro">При обработке 2-х квартир скидка 10%. При обработке 3-х и более квартир — 20%.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+              </div>
+        </div>
+        <div class="col-4">
+              <div class="preview preview_sale">
+                <p class="preview__title preview__title_sale">Исправим чужие ошибки</p>
+                <p class="preview__intro preview_sale__intro">Скидка 10% при обработках, после недобросовестных компаний.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+              </div>
+        </div>
+      </div>
+    </aside>
+    <aside class="container pt-2 pb-3">
+      <h4 class="h2 mb-2">Популярные направления</h4>
+      <div class="row">
+            <div class="col-4 mt-2">
+              <div class="preview preview_advantage">
+                <p class="preview__title">Название услуги</p>
+                <p class="preview__intro">здесь краткое описание услуги</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Название услуги" title="Название услуги"/>
+              </div>
+            </div>
+            <div class="col-4 mt-2">
+              <div class="preview preview_advantage">
+                <p class="preview__title">Название услуги</p>
+                <p class="preview__intro">здесь краткое описание услуги</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Название услуги" title="Название услуги"/>
+              </div>
+            </div>
+            <div class="col-4 mt-2">
+              <div class="preview preview_advantage">
+                <p class="preview__title">Название услуги</p>
+                <p class="preview__intro">здесь краткое описание услуги</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Название услуги" title="Название услуги"/>
+              </div>
+            </div>
+      </div>
+    </aside>
+    <div class="toggle toggle_page">
+      <div class="toggle__title toggle__title_page" data-show="Читать подробнее про компанию" data-hide="Скрыть подробности">
+        <div class="container">Читать подробнее про компанию</div>
+      </div>
+      <div class="toggle__content toggle__content_page">
+        <div class="container content">
+          <p>Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.</p>
+          <p>Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.</p>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container"> 
         <div class="row"> 
@@ -63,7 +158,9 @@
         </div>
       </div>
     </footer>
-    <script src="./js/jquery.inputmask.js"></script>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.inputmask.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>
 </html>

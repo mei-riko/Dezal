@@ -24,8 +24,9 @@
 
 @import "modal/modal";
 
-@import "list/list";
 @import "list/list-col";
+@import "list/list";
+@import "list/list_line";
 
 @import "preview/preview";
 @import "preview/preview_sale";
@@ -33,6 +34,7 @@
 @import "preview/preview_advantage";
 @import "preview/preview_step";
 @import "preview/preview_review";
+@import "preview/preview_page";
 
 @import "tabs/tabs";
 @import "toggle/toggle";
@@ -48,9 +50,13 @@
 @import "navigation/pagination";
 
 @import "catalog/catalog";
+@import "catalog/catalog-inside";
+
+@import "map/map";
 
 @import "content/content";
 @import "content/content-first";
+@import "content/content-contact";
 
 @import "form/form-cta";
 

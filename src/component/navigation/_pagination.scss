@@ -1,0 +1,27 @@
+.pagination{
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item{
+        font-weight: bold;
+        line-height: 20px;
+        text-align: center;
+        
+        display: inline-block;
+        width: 28px;
+
+        margin-right: $spacer;
+        padding: 4px;
+        border: 1px solid $border-color;
+
+        &:hover{
+            color: $blue;
+            text-decoration: none;
+        }
+
+        &--active{
+            color: $blue;
+            background-color: $light-grey;
+        }
+    }
+}

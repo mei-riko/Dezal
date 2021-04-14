@@ -1,8 +1,12 @@
 import $ from 'jquery';
+
 import '../component/tabs/tabs';
 import '../component/input/input';
 import '../component/modal/modal';
 import '../component/slider/slider';
+import '../component/map/map';
+import '../component/toggle/toggle';
+import '../component/navbar/nav';
 
 $(function() {
   // Нестандартное поведение ссылок
@@ -17,28 +21,5 @@ $(function() {
        easing: "swing"
     });
     return false;
-  });
-
-  // Раскрытие блока
-  $('.toggle .toggle__title').on("click", function(e){
-    e.preventDefault();
-    let toggle = $(this);
-    let textShow = $(this).data("show");
-    let textHide = $(this).data("hide");
-
-    if( !toggle.hasClass("toggle__title--active")){
-      toggle.addClass("toggle__title--active");
-      toggle.closest("toggle").addClass("toggle--active");
-      toggle.next(".toggle__content").slideDown();
-
-      toggle.text( textHide );
-
-		}else{
-      toggle.removeClass("toggle__title--active");
-      toggle.closest("toggle").removeClass("toggle--active");
-      toggle.next(".toggle__content").slideUp();
-
-      toggle.text( textShow );
-    }
   });
 });

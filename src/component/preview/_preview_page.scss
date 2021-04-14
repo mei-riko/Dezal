@@ -1,0 +1,12 @@
+.preview_page{
+    border: 1px solid $border-color;
+    background: $white;
+
+    &__title{
+        margin-bottom: $spacer/4;
+    }
+    &__intro{
+        color: $dark-grey;
+        margin-bottom: $spacer/2;
+    }
+}

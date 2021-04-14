@@ -1,0 +1,28 @@
+.content-contact{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &__messenger{
+        margin-right: $spacer/2;
+    }
+    &__networks{
+        font-weight: $font-weight-bold;
+        margin-right: $spacer*1.5;
+
+        &-icon{
+            fill: $black;
+            margin-right: $spacer/2;
+            transition: .4s;
+        }
+
+        &:hover{
+            color: $dark-grey;
+            text-decoration: none;
+
+            .content-contact__networks-icon{
+                fill: $dark-grey;
+            }
+        }
+    }
+}
