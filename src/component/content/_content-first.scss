@@ -18,3 +18,21 @@
         z-index: 9;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-first{
+        overflow: hidden;
+        padding: map-get($map: $spacers, $key: 2) 0 0;
+
+        &__title{
+            font-size: 20px;
+        }
+        &__image{
+            position: initial;
+            max-width: 100%;
+        }
+        &__sign{
+            display: none;
+        }
+    }
+}

@@ -3,3 +3,13 @@
     flex-wrap: wrap;
     grid-gap: map-get($map: $spacers, $key: 3);
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .list-col{
+        display: block;
+
+        &__list{
+            margin-bottom: 4px;
+        }
+    }
+}

@@ -14,3 +14,10 @@
         flex-grow: 1;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_sale{
+        max-height: 200px;
+        box-shadow: none;
+    }
+}

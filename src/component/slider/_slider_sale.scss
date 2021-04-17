@@ -1,0 +1,7 @@
+.slider_sale{
+    &:not(.owl-loaded){
+        .slider__item{
+            @extend .col-4;
+        }
+    }
+}

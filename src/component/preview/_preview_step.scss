@@ -48,3 +48,60 @@
     }
 
 }
+
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_step{
+        padding: 0 0 map-get($map: $spacers, $key: 2);
+        padding-left: 60px;
+
+        width: 100%;
+        text-align: left;
+
+        &__num{
+            line-height: 40px;
+            width: 40px;
+            border-radius: 20px;
+
+            margin: 0;
+            text-align: center;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &__intro{
+            width: 250px;
+            max-width: 100%;
+        }
+    }
+    .preview_step-final{
+        position: relative;
+        
+        padding: 0;
+        padding-left: 60px;
+
+        background-color: inherit;    
+        display: block;
+
+        &__img{
+            width: 40px;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &__title{
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: $spacer/2;
+        }    
+        &__intro{
+            margin-top: $spacer/2;
+        }
+        &__content{
+            margin-top: $spacer/2;
+        }
+    
+    }
+}

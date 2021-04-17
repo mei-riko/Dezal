@@ -15,3 +15,9 @@
         max-height: 100%;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_advantage{
+        height: auto;
+    }
+}

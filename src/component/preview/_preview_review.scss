@@ -52,12 +52,15 @@
         padding: $spacer $spacer 0;
         font-size: map-get($map: $font-size, $key: "xl");
         font-weight: $font-weight-bolder;
-        margin-bottom: 0;
+        line-height: $line-height-heading;
+
+        margin-bottom: $spacer/2;
     }
     &__rating{
         display: flex;
         flex-wrap: nowrap;
         padding: 0 $spacer $spacer;
+        line-height: $line-height-heading;
     }
     &__stars{
         display: flex;
@@ -73,5 +76,32 @@
     &__image{
         height: 240px;
         background: no-repeat top center / cover;
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_review{
+        padding: $spacer/2 $spacer;
+
+        grid-gap: $spacer/2;
+        grid-template-columns: 80px ​1f;
+
+        &__content{
+            grid-template-columns: 42px 1fr;
+            align-items: center;
+            padding: 0;
+        }
+        &__value{
+            font-size: 30px;
+        }
+        &__btn{
+            width: 100%;
+            grid-column: 1/3;
+        }
+    }
+    .preview_review-item{
+        &__title{
+            font-size: map-get($map: $font-size, $key: "md");
+        }
     }
 }

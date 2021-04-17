@@ -22,3 +22,13 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview{
+        padding: map-get($map: $spacers, $key: 2);
+
+        &__title{
+            font-size: map-get($map: $font-size, $key: "md");
+        }
+    }
+}

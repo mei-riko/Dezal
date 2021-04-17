@@ -1,3 +1,4 @@
+.container-fluid,
 .container {
   max-width: 100%;
   width: map-get($container-max-widths, 'xl');
@@ -42,11 +43,20 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
   .container{
       width: map-get($container-max-widths, 'sm');
+      padding-left: map-get($map: $spacers, $key: 2);
+      padding-right: map-get($map: $spacers, $key: 2);
+  }
+  .slider-container{
+    margin-left: -(map-get($map: $spacers, $key: 2));
+    margin-right: -(map-get($map: $spacers, $key: 2));
   }
 }
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
   .container{
-      width: 100%;
+    width: map-get($container-max-widths, 'xs');
+  }
+  .container-fluid{
+    width: 100%;
   }
 }

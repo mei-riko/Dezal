@@ -3,24 +3,67 @@
         padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
         background: $light-grey;
     }
+    &__title-block{
+        margin-bottom: map-get($map: $spacers, $key: 1);
+    }
+    &__title{
+        display: inline;
+        margin-right: $spacer;
+    }
     &__old-price{
+        display: inline-block;
+
         font-family: $font-family-base;
         font-size: 18px;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+
         text-decoration: line-through;
         color: $blue;
-        margin-left: $spacer;
+        margin-right: $spacer/2;
     }
     &__new-price{
+        display: inline-block;
+
         font-family: $font-family-base;
         font-size: 24px;
+        font-weight: $font-weight-bold;
+        line-height: $line-height-heading;
+
         text-transform: uppercase;
 
-        padding: 4px 8px;
         background: $blue;
         color: $white;
-        margin-left: $spacer/2;
+        padding: 4px 8px;
     }
     &__content-image{
         padding-left: map-get($map: $spacers, $key: 3);
+    }
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .catalog-inside{
+        &__first-screen{
+            padding: map-get($map: $spacers, $key: 2) 0;
+        }
+        &__title-block{
+            margin-bottom: $spacer;
+        }
+        &__title{
+            margin-bottom: $spacer/2;
+            display: block;
+        }
+        &__old-price{
+            font-size: 14px;
+
+            margin-left: 0;
+            margin-right: $spacer/4;
+        }
+        &__new-price{
+            font-size: 18px;
+        }
+        &__content-image{
+            padding-left: 0;
+        }
     }
 }

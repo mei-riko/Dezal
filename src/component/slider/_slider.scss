@@ -1,35 +1,157 @@
 .slider{
-    &__item{
-        outline: none;
-        height: auto;
+    &:not(.owl-loaded){
+        @extend .row;
     }
+    &.owl-loaded{
+        position: relative;
 
-    .slick-arrow{
-        width: 40px;
-        height: 40px;
-        z-index: 11;
+        .owl-nav{
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            height: 1px;
+            margin: 0;
 
-        &:before{
-            display: none;
+            transition: all .4s;
+            filter: opacity(0);
+
+            [class*=owl-]{
+                position: absolute;
+                top: 0;
+                transform: translateY(-50%);
+
+                margin: 0;
+                width: 40px;
+                height: 40px;
+
+                border: 1px solid $border-color;
+                transition: all .4s;
+
+                & > span{
+                    display: none;
+                }
+
+                &:hover, &:focus{
+                    outline: none;
+                }
+            }
+
+            .owl-prev{
+                left: $spacer/2;
+
+                background: $white url('../icon/chevron-left.svg') no-repeat center / 30px;
+                filter: opacity(.5);
+
+                &:hover{
+                    background: $white url('../icon/chevron-left.svg') no-repeat center / 30px;
+                    filter: opacity(1);
+                }
+
+                &.disabled{
+                    filter: opacity(0);
+                }
+            }
+            .owl-next{
+                right: $spacer/2;
+
+                background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
+                filter: opacity(.5);
+
+                &:hover{
+                    background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
+                    filter: opacity(1);
+                }
+
+                &.disabled{
+                    opacity: 0;
+                }
+            }
+        }
+        .owl-dots{
+            margin-top: map-get($map: $spacers, $key: 1);
+
+            .owl-dot{
+                border: 1px solid $border-color;
+                border-radius: 2px;
+                padding: 3px!important;
+                margin: 2px 6px;
+
+                span{
+                    margin: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 2px;
+
+                    background: $white;
+                    transition: all .4s;
+                }
+
+                &:hover, &:focus{
+                    outline: none;
+
+                    span{
+                        background: $grey;
+                    }
+                }
+
+                &.active{
+                    span{
+                        background: $black;
+                    }
+                }
+            }
+        }
+        .owl-item{
+            img{
+                width: auto;
+            }
         }
 
-        &:hover{
-            opacity: 0.8;
+        &:hover, &:focus{
+            outline: none;
+            .owl-nav{
+                filter: opacity(1);
+                [class*=owl-]{
+                    position: absolute;
+                }
+            }
         }
-
-        &.slick-prev{
-            left: -40px;
-            background: url('../icon/chevron-left.svg') no-repeat center / 40px;
-        }
-        &.slick-next{
-            right: -40px;
-            background: url('../icon/chevron-right.svg') no-repeat center / 40px;
-        }
-        &.slick-disabled{
-            opacity: 0.2;
-            cursor: not-allowed;
-        }
-
-        
     }
 }
+
+// Slick
+// .slider{
+//     &__item{
+//         outline: none;
+//         height: auto;
+//     }
+
+//     .slick-arrow{
+//         width: 40px;
+//         height: 40px;
+//         z-index: 11;
+
+//         &:before{
+//             display: none;
+//         }
+
+//         &:hover{
+//             opacity: 0.8;
+//         }
+
+//         &.slick-prev{
+//             left: -40px;
+//             background: url('../icon/chevron-left.svg') no-repeat center / 40px;
+//         }
+//         &.slick-next{
+//             right: -40px;
+//             background: url('../icon/chevron-right.svg') no-repeat center / 40px;
+//         }
+//         &.slick-disabled{
+//             opacity: 0.2;
+//             cursor: not-allowed;
+//         }
+
+        
+//     }
+// }

@@ -43,3 +43,49 @@
         height: 130px;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .form-cta{
+        // padding: map-get($map: $spacers, $key: 3) 0;
+        margin-top: map-get($map: $spacers, $key: 3);
+        text-align: center;
+
+        &__title{
+            width: 300px;
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: map-get($map: $spacers, $key: 3);
+
+            position: relative;
+            z-index: 11;
+        }
+        &__intro{
+            display: none;
+        }
+        &__form{
+            position: relative;
+            z-index: 11;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        &:after{
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+
+            max-width: 100%;
+
+            background: url('../icon/sign.svg') no-repeat top center / contain;
+
+            position: absolute;
+            top: $spacer;
+            left: 50%;
+
+            transform: translateX(-50%);
+        }
+    }
+}

@@ -1,0 +1,8 @@
+.slider_advantage{
+    &:not(.owl-loaded){
+        .slider__item{
+            @extend .col-4;
+            margin-top: $spacer;
+        }
+    }
+}
