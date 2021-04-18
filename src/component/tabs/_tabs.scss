@@ -59,7 +59,15 @@
         }
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .tabs{
+        &__nav{
+            &_service{
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .tabs{
         &__nav{

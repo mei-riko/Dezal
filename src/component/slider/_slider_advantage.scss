@@ -6,3 +6,13 @@
         }
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .slider_advantage{
+        &:not(.owl-loaded){
+            .slider__item{
+                @extend .col-md-6;
+            }
+        }
+    }
+}

@@ -48,8 +48,56 @@
     }
 
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .preview_step{
+        width: map-get($map: $container-max-widths, $key: 'lg')/3 - 20px;
+    }
+}
 
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .preview_step{
+        width: map-get($map: $container-max-widths, $key: 'md')/3 - 20px;
+        padding: 0 $spacer/2;
 
+        &__num{
+            line-height: 40px;
+            width: 40px;
+            border-radius: 20px;
+
+            font-size: 18px;
+            margin-bottom: $spacer;
+
+            text-align: center;
+        }
+    }
+    .preview_step-final{
+        grid-gap: $spacer;
+        grid-template-columns: 100px 180px 1fr;
+
+        &__title {
+            font-size: 17px;
+            line-height: 26px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview_step{
+        width: map-get($map: $container-max-widths, $key: 'sm')/3 - 20px;
+        padding: 0 $spacer/2;
+    }
+    .preview_step-final{
+        grid-gap: $spacer;
+        grid-template-columns: 60px 1fr;
+
+        &__title{
+            margin-bottom: 0;
+        }
+        &__content{
+            grid-column: 2/3;
+            margin-top: 0;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .preview_step{
         padding: 0 0 map-get($map: $spacers, $key: 2);
@@ -59,13 +107,7 @@
         text-align: left;
 
         &__num{
-            line-height: 40px;
-            width: 40px;
-            border-radius: 20px;
-
             margin: 0;
-            text-align: center;
-
             position: absolute;
             left: 0;
             top: 0;
@@ -102,6 +144,5 @@
         &__content{
             margin-top: $spacer/2;
         }
-    
     }
 }

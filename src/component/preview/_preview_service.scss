@@ -35,7 +35,11 @@
         background-color: $light-grey;
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview_service{
+        min-width: 140px;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .preview_service{
         min-width: 1px;

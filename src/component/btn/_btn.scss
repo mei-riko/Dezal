@@ -22,3 +22,10 @@
         width: 100%;
     }
 }
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .btn{
+        min-width: 100px;
+        padding: 14px;
+    }
+}

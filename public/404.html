@@ -12,39 +12,41 @@
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <main> 
-      <section class="container text-center mt-5 mb-5"><img class="img-fluid mb-5" src="./icon/logo-full.svg" alt="" title="" width="120px"/>
+      <section class="container text-center mt-5 mb-5"><a href="index.html" title=""> <img class="img-fluid mb-5" src="./icon/logo-full.svg" alt="" title="" width="120px" style="margin-left: auto; margin-right: auto;"/></a>
         <h1 class="heading-error">404</h1>
         <p class="lead text-bolder mb-0">Такой страницы нет</p>
         <p>Но есть много других полезных страниц </p>
       </section>
-      <aside class="container">
-        <div class="row"> 
-          <div class="col-4">
-                <div class="preview preview_sale">
-                  <p class="preview__title preview__title_sale">С заботой о старших!</p>
-                  <p class="preview__intro preview_sale__intro">Пенсионерам скидка 10% на любую услуг.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-                </div>
-          </div>
-          <div class="col-4">
-                <div class="preview preview_sale">
-                  <p class="preview__title preview__title_sale">Больше - дешевле!</p>
-                  <p class="preview__intro preview_sale__intro">При обработке 2-х квартир скидка 10%. При обработке 3-х и более квартир — 20%.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-                </div>
-          </div>
-          <div class="col-4">
-                <div class="preview preview_sale">
-                  <p class="preview__title preview__title_sale">Исправим чужие ошибки</p>
-                  <p class="preview__intro preview_sale__intro">Скидка 10% при обработках, после недобросовестных компаний.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-                </div>
+      <aside class="container-fluid container-sm-fluid container-xs-fluid">
+        <div class="slider-container">
+          <div class="slider slider_sale">
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">С заботой о старших!</p>
+                    <p class="preview__intro preview_sale__intro">Пенсионерам скидка 10% на любую услуг.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">Больше - дешевле!</p>
+                    <p class="preview__intro preview_sale__intro">При обработке 2-х квартир скидка 10%. При обработке 3-х и более квартир — 20%.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">Исправим чужие ошибки</p>
+                    <p class="preview__intro preview_sale__intro">Скидка 10% при обработках, после недобросовестных компаний.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
           </div>
         </div>
       </aside>
     </main>
     <div class="form-cta bg-secondary">
       <div class="container">
-        <div class="row"> 
-          <div class="col-7">
-            <p class="h1">Нужна бесплатная консультация?</p>
+        <div class="row justify-content-center">
+          <div class="col-7 col-sm-12 col-xs-12">
+            <p class="form-cta__title h1">Нужна бесплатная консультация?</p>
             <p class="form-cta__intro">Компания предоставляет услуги по&nbsp;дезинфекции, дезинсекции и&nbsp;дератизации по&nbsp;Санкт-Петербургу более 7 лет. </p>
             <form class="form form_inline form-cta__form" action="">
               <input class="input" type="text" placeholder="Ваше имя"/>
@@ -52,7 +54,7 @@
               <button class="btn btn_action" type="submit">Заказать обработку</button>
             </form>
           </div>
-          <div class="col-5 p-relative"> 
+          <div class="col-4 col-lg-5 p-relative d-sm-none">
             <div class="form-cta__image form-cta__image_consultation"><img class="form-cta__icon" src="./icon/icon-cta.svg"/></div>
           </div>
         </div>
@@ -61,27 +63,29 @@
     <footer class="footer">
       <div class="container"> 
         <div class="row"> 
-          <div class="col-3">
+          <div class="col-12 d-none d-sm-block text-xs-center"><a class="d-xs-block footer__phone" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a></div>
+          <div class="col-3 col-sm-6 col-xs-6 mb-sm-3">
             <div class="footer__title">УСЛУГИ КОМПАНИИ</div>
             <div class="footer__item"><a class="footer__link" href="">Дезинсекция</a></div>
             <div class="footer__item"><a class="footer__link" href="">Дератизация</a></div>
             <div class="footer__item"><a class="footer__link" href="">Дезинфекция</a></div>
             <div class="footer__item"><a class="footer__link" href="">Другие услуги</a></div>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-sm-6 col-xs-6 mb-sm-3">
             <div class="footer__title">ИНФОРМАЦИЯ</div>
             <div class="footer__item"><a class="footer__link" href="">Сертификаты и средства</a></div>
             <div class="footer__item"><a class="footer__link" href="">Полезные файлы</a></div>
             <div class="footer__item"><a class="footer__link" href="">О компании</a></div>
             <div class="footer__item"><a class="footer__link" href="">Контактная информация</a></div>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-sm-6 col-xs-6">
             <div class="footer__title">АКТУАЛЬНЫЕ АКЦИИ</div>
             <div class="footer__item"><a class="footer__link" href="">“С заботой о старших”</a></div>
             <div class="footer__item"><a class="footer__link" href="">Больше дешевле</a></div>
             <div class="footer__item"><a class="footer__link" href="">Исправим чужие ошибки</a></div>
           </div>
-          <div class="col-3 footer__contact"><a class="footer__phone" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a><a class="footer__link" href="mail:">info@mail.com</a>
+          <div class="col-3 col-sm-6 col-xs-6 footer__contact">
+            <div class="footer__title d-none d-sm-block">КОНТАКТЫ</div><a class="footer__phone d-sm-none" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback d-sm-none" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a><a class="footer__link mb-xs-1" href="mail:">info@mail.com</a>
             <p class="footer__text">Невский проспект, дом 10, Санкт-Петербург</p>
             <div class="footer__networks"> <a class="footer__networks-item" href="#"><svg class="footer__networks-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4299 4.58447H6.57013C5.47535 4.58447 4.58447 5.4753 4.58447 6.57013V13.4298C4.58447 14.5248 5.47535 15.4157 6.57013 15.4157H13.4299C14.5248 15.4157 15.4157 14.5248 15.4157 13.4298V6.57013C15.4157 5.47535 14.5248 4.58447 13.4299 4.58447ZM9.99986 13.5656C8.03398 13.5656 6.43436 11.966 6.43436 9.99986C6.43436 8.03398 8.03398 6.43436 9.99986 6.43436C11.966 6.43436 13.5656 8.03398 13.5656 9.99986C13.5656 11.966 11.966 13.5656 9.99986 13.5656ZM13.6803 7.17167C13.2149 7.17167 12.8364 6.79321 12.8364 6.32804C12.8364 5.86282 13.2149 5.48436 13.6803 5.48436C14.1455 5.48436 14.5239 5.86282 14.5239 6.32804C14.5239 6.79326 14.1455 7.17167 13.6803 7.17167Z"/>
@@ -99,6 +103,9 @@
     </footer>
     <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
     <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>

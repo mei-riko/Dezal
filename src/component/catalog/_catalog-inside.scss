@@ -40,7 +40,23 @@
         padding-left: map-get($map: $spacers, $key: 3);
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .catalog-inside{
+        &__first-screen{
+            padding: map-get($map: $spacers, $key: 3);
+        }
+        &__content-image{
+            padding-left: $spacer;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .catalog-inside{
+        &__content-image{
+            padding-left: 0;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .catalog-inside{
         &__first-screen{
@@ -61,9 +77,6 @@
         }
         &__new-price{
             font-size: 18px;
-        }
-        &__content-image{
-            padding-left: 0;
         }
     }
 }

@@ -38,13 +38,10 @@
 
             .owl-prev{
                 left: $spacer/2;
-
-                background: $white url('../icon/chevron-left.svg') no-repeat center / 30px;
-                filter: opacity(.5);
+                background: $light-grey url('../icon/chevron-left.svg') no-repeat center / 30px;
 
                 &:hover{
-                    background: $white url('../icon/chevron-left.svg') no-repeat center / 30px;
-                    filter: opacity(1);
+                    background: $bg-secondary url('../icon/chevron-left.svg') no-repeat center / 30px;
                 }
 
                 &.disabled{
@@ -53,17 +50,14 @@
             }
             .owl-next{
                 right: $spacer/2;
-
-                background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
-                filter: opacity(.5);
+                background: $light-grey url('../icon/chevron-right.svg') no-repeat 6px center / 30px;
 
                 &:hover{
-                    background: $white url('../icon/arrow-right.svg') no-repeat center / 8px;
-                    filter: opacity(1);
+                    background: $bg-secondary url('../icon/chevron-right.svg') no-repeat 6px center / 30px;
                 }
 
                 &.disabled{
-                    opacity: 0;
+                    filter: opacity(0);
                 }
             }
         }

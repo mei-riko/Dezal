@@ -26,3 +26,30 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-contact{
+        &__networks{
+            margin-right: $spacer/2;
+
+            span{
+                font-size: 11px;
+            }
+            &-icon{
+                width: 14px;
+                height: 14px;
+                margin-right: $spacer/4;
+            }
+        }
+    }    
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .content-contact{
+        flex-wrap: wrap;
+
+        &__networks{
+            flex: 0 0 100%;
+            margin-right: 0;
+            margin-bottom: $spacer/2;
+        }
+    }
+}

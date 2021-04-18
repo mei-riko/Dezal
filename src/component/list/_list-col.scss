@@ -2,14 +2,32 @@
     display: flex;
     flex-wrap: wrap;
     grid-gap: map-get($map: $spacers, $key: 3);
-}
 
+    &__list{
+        margin-bottom: 0;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .list-col{
+        // 20px
+        grid-gap: $spacer;
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .list-col{
+        &__list{
+            flex: 0 0 50%;
+            max-width: calc( 50% - 10px);
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .list-col{
         display: block;
 
         &__list{
             margin-bottom: 4px;
+            max-width: 100%;
         }
     }
 }

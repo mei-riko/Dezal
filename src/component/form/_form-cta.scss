@@ -43,10 +43,18 @@
         height: 130px;
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .form-cta{
-        // padding: map-get($map: $spacers, $key: 3) 0;
+        &__image{
+            &_order{
+                position: static;
+                height: 100%;
+            }
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .form-cta{
         margin-top: map-get($map: $spacers, $key: 3);
         text-align: center;
 

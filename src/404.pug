@@ -15,17 +15,22 @@ html(lang="ru")
         include component/mixin.pug
         main 
             section.container.text-center.mt-5.mb-5
-                img.img-fluid.mb-5(src="./icon/logo-full.svg" alt="" title="" width="120px")
+                a(href="index.html" title="") 
+                    img.img-fluid.mb-5(src="./icon/logo-full.svg" alt="" title="" width="120px" style="margin-left: auto; margin-right: auto;")
                 h1.heading-error 404
                 p.lead.text-bolder.mb-0 Такой страницы нет
                 p Но есть много других полезных страниц 
-            aside.container
+            aside.container-fluid.container-sm-fluid.container-xs-fluid
                 include component/preview/sales.pug
         include component/form/form-ctaConsultation.pug
         include component/footer/footer.pug
 
         link(href="./css/jquery.fancybox.min.css", rel='stylesheet')
         script(src="./js/jquery.fancybox.min.js")
+        
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
 
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

@@ -74,7 +74,7 @@
     display: none;
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .navbar{
         display: block;
         
@@ -114,6 +114,8 @@
 
         }
         &__link{
+            position: relative;
+            z-index: 11;
             width: 100%;
         }
         &__messenger{

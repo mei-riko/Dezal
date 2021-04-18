@@ -200,6 +200,11 @@ table{
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     html,body {font-size: map-get($font-size, 'md');}
 
+    // .h1,h1{font-size: 32px;}
+    .h1,h1{font-size: 28px;}
+    // .h2,h2{font-size: 26px;}
+    .h2,h2{font-size: 24px;}
+        
     .d-md{
         &-flex{display: flex;}
         &-none{display: none;}
@@ -225,6 +230,11 @@ table{
     .h4,h4{font-size: 18px;}
     // .h5,h5{font-size: 16px;}
     .h5,h5{font-size: 1rem;}
+
+    .heading-error{
+        font-size: 140px;
+        line-height: 120px;
+    }
     
     .d-sm{
         &-flex{display: flex;}

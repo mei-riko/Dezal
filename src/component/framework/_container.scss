@@ -29,22 +29,34 @@
 }
 // < 1200px
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
+  .container-fluid,
   .container{
       width: map-get($container-max-widths, 'lg');
+  }
+  .container-lg-fluid{
+    width: 100%;
   }
 }
 // < 992px
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
+  .container-fluid,
   .container{
       width: map-get($container-max-widths, 'md');
+  }
+  .container-md-fluid{
+    width: 100%;
   }
 }
 // < 768px
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
+  .container-fluid,
   .container{
-      width: map-get($container-max-widths, 'sm');
-      padding-left: map-get($map: $spacers, $key: 2);
-      padding-right: map-get($map: $spacers, $key: 2);
+    width: map-get($container-max-widths, 'sm');
+    padding-left: map-get($map: $spacers, $key: 2);
+    padding-right: map-get($map: $spacers, $key: 2);
+  }
+  .container-sm-fluid{
+    width: 100%;
   }
   .slider-container{
     margin-left: -(map-get($map: $spacers, $key: 2));
@@ -53,10 +65,11 @@
 }
 // < 576px
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+  .container-fluid,
   .container{
     width: map-get($container-max-widths, 'xs');
   }
-  .container-fluid{
+  .container-xs-fluid{
     width: 100%;
   }
 }

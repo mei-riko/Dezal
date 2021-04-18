@@ -1,6 +1,7 @@
 .content-first{
     overflow: hidden;
     padding: map-get($map: $spacers, $key: 5);
+    
     &__image{
         position: absolute;
         left: 0;
@@ -18,10 +19,41 @@
         z-index: 9;
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .content-first{
+        padding: map-get($map: $spacers, $key: 4) 0;
 
+        &__image{
+            bottom: -(map-get($map: $spacers, $key: 4));
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .content-first{
+        padding: map-get($map: $spacers, $key: 3) 0;
+
+        &__title{
+            font-size: 24px;
+        }
+        &__image{
+            bottom: -(map-get($map: $spacers, $key: 3));
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .content-first{
+        overflow: hidden;     
+        padding: map-get($map: $spacers, $key: 3) 0 0;
+
+        &__image{
+            position: relative;
+            bottom: 0;
+            max-width: 100%;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-first{
-        overflow: hidden;
         padding: map-get($map: $spacers, $key: 2) 0 0;
 
         &__title{

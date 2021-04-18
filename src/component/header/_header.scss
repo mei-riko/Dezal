@@ -54,16 +54,8 @@
         margin-left: 5px;
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
     .header{
-        &__nav-toggle{
-            display: block;
-            flex: 0 0 40px;
-            max-width: 40px;
-
-            padding-right: $spacer;
-        }
         &__logo{
             background-image: url('../icon/logo-full.svg');  
 
@@ -72,11 +64,44 @@
             height: 18px;
         }
         &__sublink{
+            padding-left: $spacer;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .header{
+        &__nav-toggle{
+            display: block;
+            flex: 0 0 40px;
+            max-width: 40px;
+
+            padding-right: $spacer;
+
+            &--active{
+                path:nth-child(1){
+                    display: none;
+                }
+                path:nth-child(2){
+                    transform: rotate(45deg) translateY(-250px) translateX(150px);
+                }
+                path:nth-child(3){
+                    transform: rotate(-45deg) translateY(0px) translateX(-260px);
+                }
+            }
+        }
+        &__sublink{
+            display: none;
+        }
+        &__navbar{
             display: none;
         }
         &__contact{
             flex: 0 0 calc(100% - 160px);
         }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .header{
         &__phone{
             font-size: map-get($map: $font-size, $key: "md");
             margin-right: 0;
@@ -84,8 +109,6 @@
         &__messenger{
             display: none;
         }
-        &__navbar{
-            display: none;
-        }
+        
     }
 }

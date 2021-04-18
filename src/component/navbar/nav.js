@@ -3,6 +3,7 @@ import $ from 'jquery';
 // Mobile Navbar
 $(".header .header__nav-toggle").on("click", function(){
     $(".header .header__navbar").slideToggle();
+    $(this).toggleClass("header__nav-toggle--active");
 });
 function navbarMobileClick( itemNav ){
     itemNav.on("click", function(e){
@@ -62,7 +63,7 @@ $(function(){
         });
 
     // Mobile Nav Click
-    navbarMobileClick( $('.navbar.navbar--mobile .navbar__item .navbar__link') );
+    navbarMobileClick( $('.navbar.navbar--mobile .navbar__item.navbar__item_has-child .navbar__link') );
 });
 
 // Resize

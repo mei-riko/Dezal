@@ -15,17 +15,18 @@ html(lang="ru")
         include component/header/header.pug
         include component/mixin.pug
         main.catalog-inside
+            //- Блок-заголовок
             section.bg-xs-light.pt-1.pb-3.pt-xs-2.pb-xs-2
                 .container
                     .catalog-inside__first-screen
                         .row.align-items-center
-                            .col-7.col-xs-12
+                            .col-7.col-md-12
                                 .catalog-inside__title-block
                                     h1.catalog-inside__title Уничтожим клопов полностью 
                                     span.catalog-inside__old-price от&nbsp;1500 
                                     span.catalog-inside__new-price 900&nbsp;руб.
                                 p.lead Или вернём деньги по договору!
-                                .list-col.mt-3.mt-sm-2
+                                .list-col.mt-3.mt-lg-2.mt-md-3.mt-sm-2
                                     ul.list.list-col__list
                                         li.list__item Выезд 24/7 в любое время
                                         li.list__item Не вызывает аллергии 
@@ -34,7 +35,7 @@ html(lang="ru")
                                         li.list__item Безопасно для детей и животных
                                         li.list__item Гарантии в официальном договоре
                                         li.list__item Стоимость фиксируется во время звонка
-                            .col-5.col-xs-12.mt-sm-2
+                            .col-5.col-md-12.mt-md-2
                                 form.form.form_block(action="")
                                     input.input.input--full.mb-1(type="text" placeholder="Ваше имя")
                                     input.input.input--full.input_phone.mb-1(type="tel" placeholder="Телефон")
@@ -42,11 +43,12 @@ html(lang="ru")
                                     .d-flex.mt-2.form__gift
                                         img.img-fluid.form__gift-img(src="./img/present.png")
                                         p.form__gift-content Закажите комплексную обработку от&nbsp;насекомых и&nbsp;получите обратоку от&nbsp;вирусов в&nbsp;подарок!
-            section.pt-3.pb-2.pb-xs-0
+            //- Преимущества
+            section.pt-3.pb-2.pt-lg-2.pb-lg-0.pb-sm-2.pt-sm-3.pb-xs-0
                 .container
                     h2.h1.text-center В&nbsp;97% избавляемся с&nbsp;первого раза от&nbsp;клопов
                     p.lead.text-center Гарантии закрепленные двухсторонним договором
-                .container-fluid
+                .container-fluid.container-sm-fluid.container-xs-fluid
                     .slider-container.mt-2
                         .slider.slider_advantage
                             +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений", "./img/demo-png.png")
@@ -56,11 +58,12 @@ html(lang="ru")
                             +advantage("Гипоаллергенность", "применяемых препоратов", "./img/demo-png.png")
                             +advantage("Сохранность", "мебели и&nbsp;напольных покрытий", "./img/demo-png.png")
             include component/form/form-ctaOrder.pug
-            section.container.pt-5.pb-5.pt-xs-3.pb-xs-3
+            //- Две колонки
+            section.container.pt-5.pb-5.pt-lg-4.pb-lg-4.pt-xs-3.pb-xs-3
                 h3.h2.text-center Уничтожаем клопов в Санкт-Петербурге
                 p.lead.text-center.mb-xs-0 В любых помещениях, без выходных
                 .row.justify-content-center 
-                    .col-4.mt-2.col-xs-12
+                    .col-4.col-lg-5.col-md-6.col-xs-12.mt-2
                         .preview.preview_sale
                             p.preview__title.mb-1 В жилых домах
                             ul.list 
@@ -68,7 +71,7 @@ html(lang="ru")
                                 li.list__item Дома и коттеджи
                                 li.list__item Гостиницы
                                 li.list__item Бытовки и вагончики
-                    .col-4.mt-2.col-xs-12
+                    .col-4.col-lg-5.col-md-6.col-xs-12.mt-2
                         .preview.preview_sale
                             p.preview__title.mb-1 В коммерческих помещениях
                             ul.list 
@@ -76,11 +79,12 @@ html(lang="ru")
                                 li.list__item Дома и коттеджи
                                 li.list__item Гостиницы
                                 li.list__item Бытовки и вагончики
-            section.container.pt-2.pb-2.pt-xs-0.pb-xs-0
-                .row.justify-content-between.align-items-center
-                    .col-7.col-xs-12
+            //- Блок с картинкой
+            section.container.pt-2.pb-2.pt-lg-0.pb-lg-0
+                .row.justify-content-between.justify-content-md-center.align-items-center.align-items-lg-start.align-items-md-center
+                    .col-7.col-lg-6.col-md-10.col-sm-12.col-xs-12
                         img.img-fluid(src="./img/service.jpg" alt="" title="")
-                    .col-5.col-xs-12.mt-xs-3
+                    .col-5.col-lg-6.col-md-10.col-sm-12.col-xs-12.mt-md-3
                         .catalog-inside__content-image
                             h3 Что будет, если отложить обработку?
                             ul.list.list_line.mt-3.mb-3
@@ -94,11 +98,14 @@ html(lang="ru")
                                     span.text-bolder Порча имущества
                                     span.d-block Грызунами, насекомыми, плесенью
                             a.btn.btn_action(href="#") Заказать обработку
-            section.container.pt-5.pb-5.pt-xs-3.pb-xs-3 
-                h3.h2.text-center.text-md-left Используем способы уничтожающие с 1 раза
-                p.lead.text-center.text-md-left Сертифицированные. Безопасные. По СНИП.
+            //- FAQ
+            section.container.pt-5.pb-5.pt-lg-4.pb-lg-4.pt-xs-3.pb-xs-3 
+                .row.justify-content-center.mt-3
+                    .col-8.col-md-10.col-lg-12
+                        h3.h2.text-center.text-md-left Используем способы уничтожающие с 1 раза
+                        p.lead.text-center.text-md-left Сертифицированные. Безопасные. По СНИП.
                 .row.justify-content-center.mt-3.mt-sm-2
-                    .col-8.col-md-12
+                    .col-8.col-md-10.col-sm-12
                         .toggle
                             .toggle__title.toggle__title_faq Стандартная обработка от клопов
                             .toggle__content.toggle__content_faq
@@ -111,11 +118,12 @@ html(lang="ru")
                             .toggle__title.toggle__title_faq Обработка холодным туманом
                             .toggle__content.toggle__content_faq
                                 p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus sed in dictumst sit in sodales cursus erat magnis. Sit sodales erat arcu quis odio velit. Pretium vitae nulla nulla viverra est feugiat. Ultrices auctor nibh placerat blandit rhoncus nisl. Ac at egestas sagittis, id dictum. Odio eget aliquet id eget ac urna ultricies ut fermentum. Ornare fermentum sit sed tellus. Arcu iaculis massa nulla laoreet et orci. Purus.
+            //- Отзывы
             section.pt-2.pb-2
                 .container
                     h4.text-center.text-xs-left.text-uppercase.mb-2 Отзывы о работе компании
-                    .row.mb-3
-                        .col-6.col-xs-12.mb-xs-2
+                    .row.mb-3.justify-content-center
+                        .col-6.col-md-10.col-sm-12.mb-md-2
                             .preview.preview_review 
                                 .preview_review__logo
                                     img.img-fluid(src="./img/yandex.png")
@@ -139,7 +147,7 @@ html(lang="ru")
                                         </svg>
                                     .preview_review__info 77 отзывов | 92 оценки
                                 a.btn.btn_details.preview_review__btn(href="#") Увидеть отзывы
-                        .col-6.col-xs-12
+                        .col-6.col-md-10.col-sm-12
                             .preview.preview_review
                                 .preview_review__logo
                                     img.img-fluid(src="./img/google.png")
@@ -163,7 +171,7 @@ html(lang="ru")
                                         </svg>
                                     .preview_review__info 77 отзывов | 92 оценки
                                 a.btn.btn_details.preview_review__btn(href="#") Увидеть отзывы 
-                .container-fluid
+                .container-fluid.container-sm-fluid.container-xs-fluid
                     .slider-container
                         .slider.slider_review.owl-carousel.owl-theme
                             .slider__item
@@ -293,7 +301,8 @@ html(lang="ru")
                                             </svg>
                                     .preview_review-item__image(style="background-image:url('./img/review.jpg');")
             include component/form/form-ctaOrder.pug
-            section.pt-5.pb-5.pt-xs-3.pb-xs-3.bg-light
+            //- Цены
+            section.pt-5.pb-5.pt-lg-4.pb-lg-4.pt-xs-3.pb-xs-3.bg-light
                 .container
                     h3.text-center Цены на уничтожение клопов
                     p.text-center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -337,13 +346,15 @@ html(lang="ru")
                                                     td Значение 4
                                                     td Значение 5
                                                     td Значение 6
+            //- Акции
             section.pt-3.pb-3.pb-xs-2
                 .container
-                    h4.text-uppercase.mb-2.pb-1.pb-xs-0 Актуальные акции
-                .container-fluid
+                    h4.text-uppercase.mb-2.pb-1.pb-sm-0 Актуальные акции
+                .container-fluid.container-sm-fluid.container-xs-fluid
                     include component/preview/sales.pug
-            section.container.pt-4.pb-4.pt-sm-2.pb-sm-2 
-                h3.h2.text-center.text-xs-left.mb-3.mb-xs-1 Какие этапы работы у нас есть?
+            //- Этапы работы
+            section.container.pt-4.pb-4.pt-lg-2.pb-lg-2 
+                h3.h2.text-center.text-xs-left.mb-3.mb-sm-2.mb-xs-1 Какие этапы работы у нас есть?
                 .d-flex.justify-content-center 
                     .preview.preview_step
                         .preview_step__num 1
@@ -368,6 +379,7 @@ html(lang="ru")
                             li.list__item Оформляем талон гарантийного обслуживания
                             li.list__item Выдаем официальные документы по требованиям законодательства
                             li.list__item Контролируем санитарно-техническое состояние объекта в течении всего срока гарантии
+            //- Полезные материалы
             section.pt-3.pb-3.bg-light
                 .container
                     h4.text-uppercase.mb-1 Полезные материалы
@@ -392,7 +404,8 @@ html(lang="ru")
                                 p.preview__title.preview_page__title Как подготовить квартиру к обработке?
                                 p.preview_page__intro Рассказываем, что нужно сделать к приезду специалистов по обработке
                                 a.preview__link(href="#") Подробнее
-            aside.pt-4.pb-1.pt-xs-3.pb-xs-0.container.catalog
+            //- Услуги
+            aside.pt-4.pb-1.pt-sm-3.pb-sm-0.container.catalog
                 h4.text-uppercase.mb-1 Другие услуги
                 .catalog__navigation.mt-2
                     +service("Тараканы", "service.html")(class="preview_service__img_default")

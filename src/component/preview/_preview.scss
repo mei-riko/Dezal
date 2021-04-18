@@ -22,13 +22,19 @@
         }
     }
 }
-
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .preview{
         padding: map-get($map: $spacers, $key: 2);
 
         &__title{
-            font-size: map-get($map: $font-size, $key: "md");
+            font-size: map-get($map: $font-size, $key: "lg");
         }
     }
 }
+// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+//     .preview{
+//         &__title{
+//             font-size: map-get($map: $font-size, $key: "lg");
+//         }
+//     }
+// }
