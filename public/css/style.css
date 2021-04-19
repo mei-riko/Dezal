@@ -408,7 +408,7 @@ template {
   }
 }
 
-.col, .col-1, .col-2, .col-3, .col-4, .slider_sale:not(.owl-loaded) .slider__item, .slider_advantage:not(.owl-loaded) .slider__item, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+.col, .col-1, .col-2, .col-3, .slider_review:not(.owl-loaded) .slider__item, .col-4, .slider_sale:not(.owl-loaded) .slider__item, .slider_advantage:not(.owl-loaded) .slider__item, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   position: relative;
   width: 100%;
   padding-right: 10px;
@@ -438,7 +438,7 @@ template {
   max-width: 16.66667%;
 }
 
-.col-3 {
+.col-3, .slider_review:not(.owl-loaded) .slider__item {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 25%;
   flex: 0 0 25%;
@@ -3125,6 +3125,13 @@ table tr td + td {
 .modal {
   display: none;
   max-width: 100%;
+  max-height: 80vh;
+}
+
+.modal_order {
+  padding: 0;
+  width: 420px;
+  max-width: 100%;
 }
 
 .list-col {
@@ -3970,16 +3977,6 @@ a.preview_advantage:hover {
 
 .slider_advantage:not(.owl-loaded) .slider__item {
   margin-top: 20px;
-}
-
-.slider_review.slick-initialized {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.slider_review.slick-initialized .slick-slide {
-  padding: 0 10px;
-  height: auto;
 }
 
 .header {

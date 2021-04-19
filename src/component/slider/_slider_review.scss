@@ -1,12 +1,7 @@
 .slider_review{
-
-    &.slick-initialized{
-        margin-left: -$spacer/2;
-        margin-right: -$spacer/2;
-        
-        .slick-slide{
-            padding: 0 $spacer/2;
-            height: auto;
+    &:not(.owl-loaded){
+        .slider__item{
+            @extend .col-3;
         }
     }
 }
