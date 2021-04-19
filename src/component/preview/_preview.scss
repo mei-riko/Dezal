@@ -8,11 +8,18 @@
 
         margin-bottom: $spacer/2;
 
+        position: relative;
+        z-index: 11;
+
         &_lead{
             font-size: 18px;
         }
     }
-
+    &__intro{
+        position: relative;
+        z-index: 11;
+        color: $black;
+    }
     &__link{
         font-weight: $font-weight-bolder;
         color: $blue;
@@ -22,6 +29,14 @@
         }
     }
 }
+a.preview{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: $black;
+    }
+}
+
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .preview{
         padding: map-get($map: $spacers, $key: 2);

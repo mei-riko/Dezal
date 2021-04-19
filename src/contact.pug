@@ -15,26 +15,29 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         include component/mixin.pug
-        section.container.pt-1
+        //- Inside Offset Top 20
+        section.container.pt-2
             .row.mb-3
-                .col-8.col-lg-12
-                    h1.mb-2 Контактная информация
+                .col-8.col-lg-7.col-md-12
+                    h1.mb-1.pb-1.mb-sm-2.pb-sm-0 Контактная информация
                     .row
-                        .col-6.col-xs-12.mb-xs-0.mb-sm-2.mb-3
+                        .col-6.col-xs-12.mb-3.mb-lg-2.mb-xs-1
                             ul.list
                                 li.list__item Телефон для связи: 
                                     a.text-bold(href="tel:+7 995-230-53-94") +7 995-230-53-94
                                     <br/> 
                                     span.text-grey звонки принимаются 24/7
-                                li.list__Item Главный офис: 
+                                li.list__item Главный офис: 
                                     span.text-bold Санкт-Петербург, Невский проспект, дом 1
-                        .col-6.col-xs-12.mb-xs-2.mb-sm-2.mb-3
+                        .col-6.col-xs-12.mb-3.mb-lg-2.mb-xs-2
                             ul.list
                                 li.list__item.mb-1 Служба поддержки: 
                                     a.text-bold(href="mailto:email@email.com") email@email.com
-                                li.list__Item.mb-1 Юр. адрес «Дезинфицирующий альянс»: 
-                                    span.text-bold 100000 Санкт-Петербург, Невский проспект, дом 1
-                        .col-6.col-xs-12.mb-xs-2.mb-3
+                                    <br/> 
+                                    span.text-grey ответим на любой запрос
+                                li.list__Item.mb-1 Юридический адрес: 
+                                    span.text-bold Санкт-Петербург, Невский проспект, дом&nbsp;1 | 100000
+                        .col-6.col-xs-12.mb-3.mb-xs-2
                             .content-contact
                                 a.messenger.content-contact__messenger(href="#")
                                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +50,7 @@ html(lang="ru")
                                         <path d="M4.86267 10.134L6.27778 13.6715L8.12005 11.8293L11.2787 14.3398L13.5028 4.33984L2.125 9.07908L4.86267 10.134ZM10.2516 7.20894L6.76901 10.3854L6.33524 12.0202L5.53394 10.0166L10.2516 7.20894Z" fill="white"/>
                                     </svg>
                                 a.text-bold(href="tel:+7 995 230-53-94") +7 995 230-53-94
-                        .col-6.col-xs-12.mb-xs-1.mb-3
+                        .col-6.col-xs-12.mb-3.mb-xs-2
                             .content-contact
                                 a.content-contact__networks(href="#")
                                     <svg class="content-contact__networks-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -67,13 +70,12 @@ html(lang="ru")
                                         <path d="M11.0779 11.0225C10.7573 10.8358 10.3117 10.8358 9.94958 10.8358H8.76062V13.2858H9.85188C10.2558 13.2858 10.771 13.3148 11.1194 13.0702C11.4392 12.855 11.6202 12.4325 11.6202 12.0302C11.6202 11.6565 11.3977 11.2094 11.0779 11.0225ZM10.6294 8.93021C10.894 8.72875 11.0327 8.36958 11.0327 8.03875C11.0327 7.67937 10.8658 7.33437 10.5598 7.14771C10.2396 6.96104 9.65437 7.00417 9.27854 7.00417H8.76062V9.16042H9.44583C9.83562 9.16021 10.2954 9.18896 10.6294 8.93021ZM16.4844 0H3.51521C1.57396 0 0 1.57396 0 3.51562V16.4844C0 18.4256 1.57396 20 3.51521 20H16.4844C18.4256 20 20 18.4256 20 16.4844V3.51562C20 1.57396 18.4256 0 16.4844 0ZM10.5425 15.1115H6.45667V5.25021H10.9208C12.214 5.25021 13.4071 6.07333 13.4071 7.52521C13.4071 8.64625 12.7812 9.41396 11.9829 9.6525V9.68146C13.1667 9.92604 14.0121 10.569 14.0121 12.12C14.0121 13.5554 13.0346 15.1115 10.5425 15.1115Z"/>
                                     </svg>
                                     span ВКонтакте
-                .col-4.col-lg-12
+                .col-4.col-lg-5.col-md-12
                     form.form.form_block(action="")
                         input.input.input--full.mb-1(type="text" placeholder="Ваше имя")
                         input.input.input--full.input_phone.mb-1(type="tel" placeholder="Телефон")
                         button.btn.btn--full.btn_action(type="submit") Заказать обработку
-            .map.mb-3#map
-
+            .map.mb-5#map
         .toggle.toggle_page
             .toggle__title.toggle__title_page(data-show="Читать подробнее про компанию" data-hide="Скрыть подробности")
                 .container Читать подробнее про компанию

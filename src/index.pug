@@ -32,14 +32,14 @@ html(lang="ru")
                         .col-5.col-sm-12.p-relative
                             img.content-first__image(src="./img/first-screen.png")
                             img.content-first__sign(src="./icon/sign.svg")
-            //- Акции
+            //- Акции 40-40
             section.pt-3.pb-3
                 .container
-                    h4.text-uppercase.mb-2.pb-1.pb-sm-0 Актуальные акции
+                    h4.text-uppercase.mb-1.pb-1.mb-sm-2.pb-sm-0 Актуальные акции
                 .container-fluid.container-sm-fluid.container-xs-fluid
                     include component/preview/sales.pug
-            //- Табы с услугами
-            section.container.pt-3.pb-2.pt-sm-0.pb-md-0
+            //- Табы с услугами 40-20
+            section.container.pt-3.pb-2.pt-md-2.pt-sm-0.pb-sm-0
                 .tabs
                     .tabs__nav.tabs__nav_service
                         .tabs__nav-item.tabs__nav-item--active(data-tab="#service1") Дезинсекция
@@ -68,13 +68,14 @@ html(lang="ru")
                         +service("Осы и шершни", "service.html")(class="preview_service__img_default")
                         +service("Комары", "service.html")(class="preview_service__img_default")
                         +service("Муравьи", "service.html")(class="preview_service__img_default")
+            //- Форма 60-0
             include component/form/form-ctaOrder.pug
-            //- Гарантии и преимущества
-            section.pt-5.pb-5.pt-lg-3.pb-lg-2
+            //- Гарантии и преимущества 80-80
+            section.pt-5.pb-5.pt-md-4.pb-md-4.pt-sm-3.pb-sm-3
                 .container
-                   h2.mb-xs-2 Что Альянс гарантирует своим клиентам?
+                   h2.mb-2 Что Альянс гарантирует своим клиентам?
                 .container-fluid.container-sm-fluid.container-xs-fluid
-                    .slider-container.mt-2
+                    .slider-container
                         .slider.slider_advantage
                             +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений", "./img/demo-png.png")
                             +advantage("Анонимность", "для&nbsp;всех соседей и&nbsp;компаний", "./img/demo-png.png")
@@ -82,9 +83,9 @@ html(lang="ru")
                             +advantage("Чистоту", "и&nbsp;отсутствие запаха препаратов", "./img/demo-png.png")
                             +advantage("Гипоаллергенность", "применяемых препоратов", "./img/demo-png.png")
                             +advantage("Сохранность", "мебели и&nbsp;напольных покрытий", "./img/demo-png.png")
-            //- Этапы работы
-            section.container.pt-4.pb-4.pt-lg-2.pb-lg-2 
-                h3.h2.text-center.text-xs-left.mb-3.mb-sm-2.mb-xs-1 Какие этапы работы у нас есть?
+            //- Этапы работы 20-20
+            section.container.pt-2.pb-2.pt-md-0.pb-md-0 
+                h3.h2.text-center.text-xs-left.mb-3.mb-sm-1pb-sm-1 Какие этапы работы у нас есть?
                 .d-flex.justify-content-center 
                     .preview.preview_step
                         .preview_step__num 1
@@ -109,10 +110,10 @@ html(lang="ru")
                             li.list__item Оформляем талон гарантийного обслуживания
                             li.list__item Выдаем официальные документы по требованиям законодательства
                             li.list__item Контролируем санитарно-техническое состояние объекта в течении всего срока гарантии
-            //- Отзывы
-            section.pt-2.pb-2
+            //- Отзывы 80-20
+            section.pt-5.pb-2.pt-md-4.pt-sm-3.pb-sm-0
                 .container
-                    h4.text-center.text-xs-left.text-uppercase.mb-2 Отзывы о работе компании
+                    h4.text-center.text-xs-left.text-uppercase.mb-1.pb-1 Отзывы о работе компании
                     .row.mb-3.justify-content-center
                         .col-6.col-md-10.col-sm-12.mb-md-2
                             .preview.preview_review 
@@ -291,7 +292,9 @@ html(lang="ru")
                                                 <path d="M48.856,22.73c0.983-0.958,1.33-2.364,0.906-3.671c-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757  c-0.515-0.075-0.96-0.398-1.19-0.865L28.182,3.043c-0.607-1.231-1.839-1.996-3.212-1.996c-1.372,0-2.604,0.765-3.211,1.996  L16.352,14c-0.23,0.467-0.676,0.79-1.191,0.865L3.069,16.622c-1.359,0.197-2.467,1.131-2.892,2.438  c-0.424,1.307-0.077,2.713,0.906,3.671l8.749,8.528c0.373,0.364,0.544,0.888,0.456,1.4L8.224,44.701  c-0.183,1.06,0.095,2.091,0.781,2.904c1.066,1.267,2.927,1.653,4.415,0.871l10.814-5.686c0.452-0.237,1.021-0.235,1.472,0  l10.815,5.686c0.526,0.277,1.087,0.417,1.666,0.417c1.057,0,2.059-0.47,2.748-1.288c0.687-0.813,0.964-1.846,0.781-2.904  l-2.065-12.042c-0.088-0.513,0.083-1.036,0.456-1.4L48.856,22.73z"/>
                                             </svg>
                                     .preview_review-item__image(style="background-image:url('./img/review.jpg');")
+            //- Форма 60-0
             include component/form/form-ctaConsultation.pug
+            //- SEO контент 0-0
             .toggle.toggle_page
                 .toggle__title.toggle__title_page(data-show="Читать подробнее про компанию" data-hide="Скрыть подробности")
                     .container Читать подробнее про компанию

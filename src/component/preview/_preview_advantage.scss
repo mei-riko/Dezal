@@ -16,6 +16,11 @@
     }
 }
 
+a.preview_advantage{
+    &:hover{
+        background: darken($color: $light-grey, $amount: 6);
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .preview_advantage{
         height: auto;

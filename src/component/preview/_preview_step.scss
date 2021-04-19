@@ -2,7 +2,7 @@
     position: relative;
     padding: 0 $spacer;
 
-    width: 360px;
+    width:  map-get($map: $container-max-widths, $key: 'xl')/3 - 20px;
     max-width: 100%;
     text-align: center;
 
@@ -17,6 +17,11 @@
         color: $white;
         font-weight: $font-weight-bold;
         font-size: 22px;
+    }
+    &__intro{
+        width: 320px;
+        max-width: 100%;
+        margin: 0 auto;
     }
 }
 

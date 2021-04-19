@@ -14,7 +14,9 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         include component/mixin.pug        
-        section.catalog.container.pt-1.pb-3
+        //- Первый экран 20-40
+        section.catalog.container.pt-2.pb-3.pb-md-2.pb-sm-0
+            //- Заглавный экран
             .catalog__first-screen
                 .catalog__image
                     img.img-fluid(src="./img/cta-order.png")
@@ -29,10 +31,12 @@ html(lang="ru")
                         li.list__item Сертифицированные препараты
                         li.list__item Стоимость фиксируется во время звонка
                     a.btn.btn_action.btn--full(href="javascript:;" data-fancybox="order" data-src="#orderModal") Заказать обработку
-            .content.mt-4
+            //- Контент страницы 60
+            .content.mt-4.mt-sm-3
                 p Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.
                 p Velit, sed quia non provident, similique sunt in culpa, qui dolorem. Ducimus, qui dolorem ipsum, quia. Quibusdam et accusamus et accusamus et quas. Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.
-            .catalog__navigation.mt-4
+            //- Навигация по разделу 60
+            .catalog__navigation.mt-4.mt-sm-3
                 +service("Тараканы", "service.html")(class="preview_service__img_default")
                 +service("Клопы", "service.html")(class="preview_service__img_default")
                 +service("Клещи", "service.html")(class="preview_service__img_default")
@@ -48,18 +52,33 @@ html(lang="ru")
                 +service("Блохи", "service.html")(class="preview_service__img_default")
                 +service("Сколопендры", "service.html")(class="preview_service__img_default")
         include component/form/form-ctaOrder.pug
-        section.container.pt-5.pb-3
-            h2 Что Альянс гарантирует своим клиентам?
-            .row
-                +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений", "./img/demo-png.png")
-                +advantage("Анонимность", "для&nbsp;всех соседей и&nbsp;компаний", "./img/demo-png.png")
-                +advantage("Профессионализм", "сертифицированных специалистов", "./img/demo-png.png")
-                +advantage("Чистоту", "и&nbsp;отсутствие запаха препаратов", "./img/demo-png.png")
-                +advantage("Гипоаллергенность", "применяемых препоратов", "./img/demo-png.png")
-                +advantage("Сохранность", "мебели и&nbsp;напольных покрытий", "./img/demo-png.png")
-        section.container.pt-3.pb-3
-                h4.text-uppercase.mb-2.pb-1 Актуальные акции
+        //- Гарантии и преимущества 40-80
+        section.pt-5.pb-3.pt-md-4.pt-sm-3.pb-sm-2
+            .container
+                h2.mb-2 Что Альянс гарантирует своим клиентам?
+            .container-fluid.container-sm-fluid.container-xs-fluid
+                .slider-container
+                    .slider.slider_advantage
+                        +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений", "./img/demo-png.png")
+                        +advantage("Анонимность", "для&nbsp;всех соседей и&nbsp;компаний", "./img/demo-png.png")
+                        +advantage("Профессионализм", "сертифицированных специалистов", "./img/demo-png.png")
+                        +advantage("Чистоту", "и&nbsp;отсутствие запаха препаратов", "./img/demo-png.png")
+                        +advantage("Гипоаллергенность", "применяемых препоратов", "./img/demo-png.png")
+                        +advantage("Сохранность", "мебели и&nbsp;напольных покрытий", "./img/demo-png.png")
+        //- Акции 40-80
+        section.pt-3.pb-5.pt-md-2.pb-md-4.pt-sm-2.pb-sm-3
+            .container
+                h4.text-uppercase.mb-1.pb-1.mb-sm-2.pb-sm-0 Актуальные акции
+            .container-fluid.container-sm-fluid.container-xs-fluid
                 include component/preview/sales.pug
         include component/footer/footer.pug
+
+        link(href="./css/jquery.fancybox.min.css", rel='stylesheet')
+        script(src="./js/jquery.fancybox.min.js")
+
+        link(href='./css/owl.carousel.min.css', rel='stylesheet')
+        link(href='./css/owl.theme.default.min.css', rel='stylesheet')
+        script(src="./js/owl.carousel.min.js")
+
         script(src="./js/jquery.inputmask.min.js")
         script(src="./js/app.min.js")

@@ -3,7 +3,7 @@
         border: 1px solid $border-color;
         display: flex;
         align-items: center;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
     &__image{
         flex: 0 0 200px;
@@ -11,6 +11,7 @@
     }
     &__intro{
         flex: 1 0 calc(100% - 650px);
+        max-width: 100%;
         padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 2);
 
         &-title{
@@ -26,6 +27,7 @@
     }
     &__advantage{
         flex: 0 0 450px;
+        max-width: 100%;
         
         padding: map-get($map: $spacers, $key: 3);
         background-color: $light-grey;
@@ -37,7 +39,61 @@
         flex-wrap: wrap;
     }
 }
-
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
+    .catalog{
+        &__image{
+            // padding-top: $spacer;
+            // padding-bottom: $spacer;
+            flex: 0 0 180px;
+        }
+        &__intro{
+            flex: 1 0 calc(100% - 520px);
+        }
+        &__advantage{
+            flex: 0 0 340px;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .catalog{
+        &__image{
+            padding-top: $spacer;
+            padding-bottom: $spacer;
+            flex: 0 0 200px;
+        }
+        &__intro{
+            padding: $spacer map-get($map: $spacers, $key: 3);
+            flex: 1 0 calc(100% - 200px);
+        }
+        &__advantage{
+            padding-top: $spacer;
+            padding-bottom: $spacer;
+            flex: 0 0 100%;
+        }
+    }
+}
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .catalog{
+        &__image{
+            display: none;
+        }
+        &__intro{
+            padding: map-get($map: $spacers, $key: 3);
+            flex: 0 0 100%;
+        }
+        &__advantage{
+            padding: map-get($map: $spacers, $key: 3);
+            flex: 0 0 100%;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    
+    .catalog{
+        &__intro{
+            padding: $spacer;
+        }
+        &__advantage{
+            padding: $spacer;
+        }
+    }
 }

@@ -1,8 +1,37 @@
 .catalog-inside{
+    // Blocks
     &__first-screen{
         padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
         background: $light-grey;
     }
+    &__advantage{
+        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
+        border: 1px solid $border-color;
+
+        &-item{
+            display: flex;
+            flex-wrap: wrap;
+
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-img{
+            flex: 0 0 60px;
+            max-width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            background: $light-grey no-repeat center / contain;
+            border: 1px solid $border-color;
+        }
+        &-content{
+            flex: 0 0 calc(100% - 80px);
+            max-width: calc(100% - 80px);
+
+            line-height: $line-height-heading;
+        }
+    }
+    // Elements
     &__title-block{
         margin-bottom: map-get($map: $spacers, $key: 1);
     }
@@ -42,9 +71,25 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .catalog-inside{
+        // Blocks
         &__first-screen{
             padding: map-get($map: $spacers, $key: 3);
         }
+        &__advantage{
+            padding: map-get($map: $spacers, $key: 3);
+            &-img{
+                flex: 0 0 40px;
+                max-width: 40px;
+                height: 40px;
+            }
+            &-content{
+                flex: 0 0 calc(100% - 60px);
+                max-width: calc(100% - 60px);
+    
+                line-height: $line-height-heading;
+            }
+        }
+        // Elements
         &__content-image{
             padding-left: $spacer;
         }
@@ -57,11 +102,20 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .catalog-inside{
+        &__advantage{
+            padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .catalog-inside{
+        // Blocks
         &__first-screen{
             padding: map-get($map: $spacers, $key: 2) 0;
         }
+        // Elements
         &__title-block{
             margin-bottom: $spacer;
         }

@@ -12,7 +12,12 @@
   <body>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <header class="header container"> 
-      <div class="header__top"><a class="header__logo" href="index.html"></a>
+      <div class="header__top">
+        <svg class="header__nav-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+          <path d="M491.318,78.439H20.682C9.26,78.439,0,87.699,0,99.121c0,11.422,9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.26,20.682-20.682C512,87.699,502.741,78.439,491.318,78.439z"></path>
+          <path d="M491.318,235.318H20.682C9.26,235.318,0,244.577,0,256s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682C512,244.578,502.741,235.318,491.318,235.318z"></path>
+          <path d="M491.318,392.197H20.682C9.26,392.197,0,401.456,0,412.879s9.26,20.682,20.682,20.682h470.636c11.423,0,20.682-9.259,20.682-20.682S502.741,392.197,491.318,392.197z"></path>
+        </svg><a class="header__logo" href="index.html"></a>
         <div class="header__sublink"> <a class="header__link" href="text.html">Сертификаты и средства</a><a class="header__link" href="files.html">Полезные статьи</a><a class="header__link" href="text.html">О компании</a></div>
         <div class="header__contact"><a class="header__phone" href="tel:+7 995 230-53-94">+7 995 230-53-94</a><a class="messenger header__messenger" href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.00225 0H8.99775C4.03538 0 0 4.0365 0 9C0 10.9688 0.6345 12.7935 1.71338 14.2751L0.59175 17.6186L4.05113 16.5128C5.47425 17.4555 7.17187 18 9.00225 18C13.9646 18 18 13.9624 18 9C18 4.03763 13.9646 0 9.00225 0Z" fill="#4CAF50"/>
@@ -23,10 +28,34 @@
 </svg></a></div>
       </div>
       <div class="header__navbar">
-        <div class="navbar"><a class="navbar__item navbar__item_has-child" href="catalog.html">Дезинсекция</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Дератизация</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Дезинфекция</a><a class="navbar__item navbar__item_has-child" href="catalog.html">Услуги компании</a><a class="navbar__item" href="contact.html">Контактная информация</a></div>
+        <div class="navbar">
+          <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="catalog.html" data-nav="#nav1">Дезинсекция</a>
+            <div class="navbar__children" id="nav1"><a class="navbar__children-item" href="service.html">Тараканы</a><a class="navbar__children-item" href="service.html">Клопы</a><a class="navbar__children-item" href="service.html">Клещи</a><a class="navbar__children-item" href="service.html">Медведка</a><a class="navbar__children-item" href="service.html">Моль</a><a class="navbar__children-item" href="service.html">Мокрица</a><a class="navbar__children-item" href="service.html">Древоточец</a><a class="navbar__children-item" href="service.html">Короед</a><a class="navbar__children-item" href="service.html">Мухи</a><a class="navbar__children-item" href="service.html">Осы и шершни</a><a class="navbar__children-item" href="service.html">Комары</a><a class="navbar__children-item" href="service.html">Муравьи</a><a class="navbar__children-item" href="service.html">Блохи</a><a class="navbar__children-item" href="service.html">Сколопендры</a><a class="navbar__children-parent" href="catalog.html">Перейти в раздел «Дезинсекция»</a></div>
+          </div>
+          <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="catalog.html" data-nav="#nav2">Дератизация</a>
+            <div class="navbar__children" id="nav2"><a class="navbar__children-item" href="service.html">Тараканы</a><a class="navbar__children-item" href="service.html">Клопы</a><a class="navbar__children-item" href="service.html">Клещи</a><a class="navbar__children-item" href="service.html">Медведка</a><a class="navbar__children-item" href="service.html">Моль</a><a class="navbar__children-item" href="service.html">Мокрица</a></div>
+          </div>
+          <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="catalog.html" data-nav="#nav3">Дезинфекция</a>
+            <div class="navbar__children" id="nav3"><a class="navbar__children-item" href="service.html">Мокрица</a><a class="navbar__children-item" href="service.html">Древоточец</a><a class="navbar__children-item" href="service.html">Короед</a><a class="navbar__children-item" href="service.html">Мухи</a><a class="navbar__children-item" href="service.html">Осы и шершни</a><a class="navbar__children-item" href="service.html">Комары</a><a class="navbar__children-item" href="service.html">Муравьи</a><a class="navbar__children-item" href="service.html">Блохи</a></div>
+          </div>
+          <div class="navbar__item navbar__item_has-child"><a class="navbar__link" href="catalog.html" data-nav="#nav4">Услуги компании</a>
+            <div class="navbar__children" id="nav4"><a class="navbar__children-item" href="service.html">Комары</a><a class="navbar__children-item" href="service.html">Муравьи</a><a class="navbar__children-item" href="service.html">Блохи</a><a class="navbar__children-item" href="service.html">Сколопендры</a></div>
+          </div><a class="navbar__item" href="contact.html">Контактная информация</a>
+        </div>
+        <div class="navbar navbar_mobile-only"> 
+          <div class="navbar__item"><a class="navbar__link" href="text.html">Сертификаты и средства</a></div>
+          <div class="navbar__item"><a class="navbar__link" href="files.html">Полезные статьи</a></div>
+          <div class="navbar__item"><a class="navbar__link" href="text.html">О компании</a></div><a class="navbar__phone" href="tel:+7 995 230-53-94">+7 995 230-53-94</a><a class="messenger navbar__messenger" href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.00225 0H8.99775C4.03538 0 0 4.0365 0 9C0 10.9688 0.6345 12.7935 1.71338 14.2751L0.59175 17.6186L4.05113 16.5128C5.47425 17.4555 7.17187 18 9.00225 18C13.9646 18 18 13.9624 18 9C18 4.03763 13.9646 0 9.00225 0Z" fill="#4CAF50"/>
+<path d="M14.2391 12.7091C14.022 13.3222 13.1602 13.8307 12.4729 13.9792C12.0026 14.0794 11.3884 14.1592 9.32062 13.302C6.67575 12.2062 4.9725 9.51861 4.83975 9.34424C4.71262 9.16986 3.771 7.92111 3.771 6.62961C3.771 5.33811 4.42687 4.70924 4.69125 4.43924C4.90837 4.21761 5.26725 4.11636 5.6115 4.11636C5.72287 4.11636 5.823 4.12199 5.913 4.12649C6.17737 4.13774 6.31012 4.15349 6.4845 4.57086C6.70162 5.09399 7.23037 6.38549 7.29337 6.51824C7.3575 6.65099 7.42162 6.83099 7.33162 7.00536C7.24725 7.18536 7.173 7.26524 7.04025 7.41824C6.9075 7.57124 6.7815 7.68824 6.64875 7.85249C6.52725 7.99536 6.39 8.14836 6.543 8.41274C6.696 8.67149 7.22475 9.53436 8.00325 10.2274C9.00787 11.1217 9.82237 11.4075 10.1137 11.529C10.3309 11.619 10.5896 11.5976 10.7482 11.4289C10.9496 11.2117 11.1982 10.8517 11.4514 10.4974C11.6314 10.2431 11.8586 10.2116 12.0971 10.3016C12.3401 10.386 13.626 11.0216 13.8904 11.1532C14.1547 11.286 14.3291 11.349 14.3932 11.4604C14.4562 11.5717 14.4562 12.0949 14.2391 12.7091Z" fill="#FAFAFA"/>
+</svg><span>What'sApp</span></a><a class="messenger navbar__messenger" href="#"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="9" r="9" fill="#78CEF3"/>
+<path d="M4.86267 10.134L6.27778 13.6715L8.12005 11.8293L11.2787 14.3398L13.5028 4.33984L2.125 9.07908L4.86267 10.134ZM10.2516 7.20894L6.76901 10.3854L6.33524 12.0202L5.53394 10.0166L10.2516 7.20894Z" fill="white"/>
+</svg><span>Telegram</span></a>
+        </div>
       </div>
     </header>
-    <section class="catalog container pt-1 pb-3">
+    <section class="catalog container pt-2 pb-3 pb-md-2 pb-sm-0">
       <div class="catalog__first-screen">
         <div class="catalog__image"><img class="img-fluid" src="./img/cta-order.png"/></div>
         <div class="catalog__intro">
@@ -43,11 +72,11 @@
           </ul><a class="btn btn_action btn--full" href="javascript:;" data-fancybox="order" data-src="#orderModal">Заказать обработку</a>
         </div>
       </div>
-      <div class="content mt-4">
+      <div class="content mt-4 mt-sm-3">
         <p>Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.</p>
         <p>Velit, sed quia non provident, similique sunt in culpa, qui dolorem. Ducimus, qui dolorem ipsum, quia. Quibusdam et accusamus et accusamus et quas. Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.</p>
       </div>
-      <div class="catalog__navigation mt-4"><a class="preview preview_service" href="service.html">
+      <div class="catalog__navigation mt-4 mt-sm-3"><a class="preview preview_service" href="service.html">
               <div class="preview_service__img preview_service__img_default"></div><span>Тараканы</span></a><a class="preview preview_service" href="service.html">
               <div class="preview_service__img preview_service__img_default"></div><span>Клопы</span></a><a class="preview preview_service" href="service.html">
               <div class="preview_service__img preview_service__img_default"></div><span>Клещи</span></a><a class="preview preview_service" href="service.html">
@@ -66,12 +95,12 @@
     </section>
     <div class="form-cta bg-secondary">
       <div class="container">
-        <div class="row"> 
-          <div class="col-3 p-relative"> 
+        <div class="row justify-content-center justify-content-lg-around justify-content-md-center">
+          <div class="col-3 p-relative d-sm-none">
             <div class="form-cta__image form-cta__image_order"></div>
           </div>
-          <div class="col-8">
-            <p class="h1">Избавьтесь от проблемы уже через 2 часа</p>
+          <div class="col-8 col-sm-10 col-xs-12">
+            <p class="h1 form-cta__title">Избавьтесь от&nbsp;проблемы уже через 2&nbsp;часа</p>
             <p class="form-cta__intro">Компания предоставляет услуги по&nbsp;дезинфекции, дезинсекции и&nbsp;дератизации по&nbsp;Санкт-Петербургу более 7 лет. </p>
             <form class="form form_inline form-cta__form" action="">
               <input class="input" type="text" placeholder="Ваше имя"/>
@@ -82,94 +111,108 @@
         </div>
       </div>
     </div>
-    <section class="container pt-5 pb-3">
-      <h2>Что Альянс гарантирует своим клиентам?</h2>
-      <div class="row">
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Безопасность</p>
-                <p class="preview__intro">для&nbsp;детей, животных и&nbsp;растений</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Безопасность" title="Безопасность"/>
-              </div>
-            </div>
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Анонимность</p>
-                <p class="preview__intro">для&nbsp;всех соседей и&nbsp;компаний</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Анонимность" title="Анонимность"/>
-              </div>
-            </div>
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Профессионализм</p>
-                <p class="preview__intro">сертифицированных специалистов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Профессионализм" title="Профессионализм"/>
-              </div>
-            </div>
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Чистоту</p>
-                <p class="preview__intro">и&nbsp;отсутствие запаха препаратов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Чистоту" title="Чистоту"/>
-              </div>
-            </div>
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Гипоаллергенность</p>
-                <p class="preview__intro">применяемых препоратов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Гипоаллергенность" title="Гипоаллергенность"/>
-              </div>
-            </div>
-            <div class="col-4 mt-2">
-              <div class="preview preview_advantage">
-                <p class="preview__title">Сохранность</p>
-                <p class="preview__intro">мебели и&nbsp;напольных покрытий</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Сохранность" title="Сохранность"/>
-              </div>
-            </div>
+    <section class="pt-5 pb-3 pt-md-4 pt-sm-3 pb-sm-2">
+      <div class="container">
+        <h2 class="mb-2">Что Альянс гарантирует своим клиентам?</h2>
+      </div>
+      <div class="container-fluid container-sm-fluid container-xs-fluid">
+        <div class="slider-container">
+          <div class="slider slider_advantage">
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Безопасность</p>
+                    <p class="preview__intro">для&nbsp;детей, животных и&nbsp;растений</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Безопасность" title="Безопасность"/>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Анонимность</p>
+                    <p class="preview__intro">для&nbsp;всех соседей и&nbsp;компаний</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Анонимность" title="Анонимность"/>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Профессионализм</p>
+                    <p class="preview__intro">сертифицированных специалистов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Профессионализм" title="Профессионализм"/>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Чистоту</p>
+                    <p class="preview__intro">и&nbsp;отсутствие запаха препаратов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Чистоту" title="Чистоту"/>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Гипоаллергенность</p>
+                    <p class="preview__intro">применяемых препоратов</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Гипоаллергенность" title="Гипоаллергенность"/>
+                  </div>
+                </div>
+                <div class="slider__item">
+                  <div class="preview preview_advantage">
+                    <p class="preview__title">Сохранность</p>
+                    <p class="preview__intro">мебели и&nbsp;напольных покрытий</p><img class="preview_advantage__img" src="./img/demo-png.png" alt="Сохранность" title="Сохранность"/>
+                  </div>
+                </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="container pt-3 pb-3">
-      <h4 class="text-uppercase mb-2 pb-1">Актуальные акции</h4>
-      <div class="row"> 
-        <div class="col-4">
-              <div class="preview preview_sale">
-                <p class="preview__title preview__title_sale">С заботой о старших!</p>
-                <p class="preview__intro preview_sale__intro">Пенсионерам скидка 10% на любую услуг.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-              </div>
-        </div>
-        <div class="col-4">
-              <div class="preview preview_sale">
-                <p class="preview__title preview__title_sale">Больше - дешевле!</p>
-                <p class="preview__intro preview_sale__intro">При обработке 2-х квартир скидка 10%. При обработке 3-х и более квартир — 20%.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-              </div>
-        </div>
-        <div class="col-4">
-              <div class="preview preview_sale">
-                <p class="preview__title preview__title_sale">Исправим чужие ошибки</p>
-                <p class="preview__intro preview_sale__intro">Скидка 10% при обработках, после недобросовестных компаний.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
-              </div>
+    <section class="pt-3 pb-5 pt-md-2 pb-md-4 pt-sm-2 pb-sm-3">
+      <div class="container">
+        <h4 class="text-uppercase mb-1 pb-1 mb-sm-2 pb-sm-0">Актуальные акции</h4>
+      </div>
+      <div class="container-fluid container-sm-fluid container-xs-fluid">
+        <div class="slider-container">
+          <div class="slider slider_sale">
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">С заботой о старших!</p>
+                    <p class="preview__intro preview_sale__intro">Пенсионерам скидка 10% на любую услуг.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">Больше - дешевле!</p>
+                    <p class="preview__intro preview_sale__intro">При обработке 2-х квартир скидка 10%. При обработке 3-х и более квартир — 20%.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
+            <div class="slider__item">
+                  <div class="preview preview_sale">
+                    <p class="preview__title preview__title_sale">Исправим чужие ошибки</p>
+                    <p class="preview__intro preview_sale__intro">Скидка 10% при обработках, после недобросовестных компаний.</p><a class="btn btn--full btn_details" href="text.html">Подробности акции</a>
+                  </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <footer class="footer">
       <div class="container"> 
         <div class="row"> 
-          <div class="col-3">
+          <div class="col-12 d-none d-sm-block text-xs-center"><a class="d-xs-block footer__phone" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a></div>
+          <div class="col-3 col-sm-6 col-xs-6 mb-sm-3">
             <div class="footer__title">УСЛУГИ КОМПАНИИ</div>
             <div class="footer__item"><a class="footer__link" href="">Дезинсекция</a></div>
             <div class="footer__item"><a class="footer__link" href="">Дератизация</a></div>
             <div class="footer__item"><a class="footer__link" href="">Дезинфекция</a></div>
             <div class="footer__item"><a class="footer__link" href="">Другие услуги</a></div>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-sm-6 col-xs-6 mb-sm-3">
             <div class="footer__title">ИНФОРМАЦИЯ</div>
             <div class="footer__item"><a class="footer__link" href="">Сертификаты и средства</a></div>
             <div class="footer__item"><a class="footer__link" href="">Полезные файлы</a></div>
             <div class="footer__item"><a class="footer__link" href="">О компании</a></div>
             <div class="footer__item"><a class="footer__link" href="">Контактная информация</a></div>
           </div>
-          <div class="col-3">
+          <div class="col-3 col-sm-6 col-xs-6">
             <div class="footer__title">АКТУАЛЬНЫЕ АКЦИИ</div>
             <div class="footer__item"><a class="footer__link" href="">“С заботой о старших”</a></div>
             <div class="footer__item"><a class="footer__link" href="">Больше дешевле</a></div>
             <div class="footer__item"><a class="footer__link" href="">Исправим чужие ошибки</a></div>
           </div>
-          <div class="col-3 footer__contact"><a class="footer__phone" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a><a class="footer__link" href="mail:">info@mail.com</a>
+          <div class="col-3 col-sm-6 col-xs-6 footer__contact">
+            <div class="footer__title d-none d-sm-block">КОНТАКТЫ</div><a class="footer__phone d-sm-none" href="tel:7 995 230-53-94">+7 995 230-53-94</a><a class="footer__callback d-sm-none" href="javascript:;" data-fancybox="callback" data-src="#callback">Заказать звонок</a><a class="footer__link mb-xs-1" href="mail:">info@mail.com</a>
             <p class="footer__text">Невский проспект, дом 10, Санкт-Петербург</p>
             <div class="footer__networks"> <a class="footer__networks-item" href="#"><svg class="footer__networks-icon" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4299 4.58447H6.57013C5.47535 4.58447 4.58447 5.4753 4.58447 6.57013V13.4298C4.58447 14.5248 5.47535 15.4157 6.57013 15.4157H13.4299C14.5248 15.4157 15.4157 14.5248 15.4157 13.4298V6.57013C15.4157 5.47535 14.5248 4.58447 13.4299 4.58447ZM9.99986 13.5656C8.03398 13.5656 6.43436 11.966 6.43436 9.99986C6.43436 8.03398 8.03398 6.43436 9.99986 6.43436C11.966 6.43436 13.5656 8.03398 13.5656 9.99986C13.5656 11.966 11.966 13.5656 9.99986 13.5656ZM13.6803 7.17167C13.2149 7.17167 12.8364 6.79321 12.8364 6.32804C12.8364 5.86282 13.2149 5.48436 13.6803 5.48436C14.1455 5.48436 14.5239 5.86282 14.5239 6.32804C14.5239 6.79326 14.1455 7.17167 13.6803 7.17167Z"/>
@@ -185,6 +228,11 @@
         </div>
       </div>
     </footer>
+    <link href="./css/jquery.fancybox.min.css" rel="stylesheet"/>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <link href="./css/owl.carousel.min.css" rel="stylesheet"/>
+    <link href="./css/owl.theme.default.min.css" rel="stylesheet"/>
+    <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/jquery.inputmask.min.js"></script>
     <script src="./js/app.min.js"></script>
   </body>

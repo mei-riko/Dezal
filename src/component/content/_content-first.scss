@@ -54,7 +54,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .content-first{
-        padding: map-get($map: $spacers, $key: 2) 0 0;
+        // padding: map-get($map: $spacers, $key: 2) 0 0;
 
         &__title{
             font-size: 20px;

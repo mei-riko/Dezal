@@ -14,10 +14,11 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         include component/mixin.pug
-        section.container.pt-1
+        //- Inside Offset Top 20
+        section.container.pt-2
             h1.mb-0 Полезные файлы
             .row
-                .col-4.col-xs-12.col-md-6.mt-3.mt-sm-2
+                .col-4.col-xs-12.col-md-6.mt-3
                     img.img-fluid(src="./img/blog-prev.png")
                     a.text-bold.lead.d-block.mt-2.mb-1(href="text.html") Как подготовить квартиру к дезинсекции?
                     p.mb-2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lacus massa auctor amet eu in.
@@ -43,17 +44,18 @@ html(lang="ru")
                 span.pagination__item.pagination__item--active 3
                 a.pagination__item(href="#") 4
         include component/form/form-ctaConsultation.pug
-        //- Акции
-        aside.pt-4.pb-4
+        //- Акции 40-40
+        aside.pt-3.pb-3.pb-sm-2
             .container
-                h4.text-uppercase.mb-2.pb-1.pb-sm-0 Актуальные акции
+                h4.text-uppercase.mb-1.pb-1.mb-sm-2.pb-sm-0 Актуальные акции
             .container-fluid.container-sm-fluid.container-xs-fluid
                 include component/preview/sales.pug
-        aside.pt-2.pb-3
+        //- Другие направления 40-40
+        aside.pt-3.pb-3.pt-sm-2
             .container
-                h4.h2.mb-2 Популярные направления
+                h4.h2 Популярные направления
             .container-fluid.container-sm-fluid.container-xs-fluid
-                    .slider-container.mt-2
+                    .slider-container
                         .slider.slider_advantage
                             +advantage("Название услуги", "здесь краткое описание услуги", "./img/demo-png.png")
                             +advantage("Название услуги", "здесь краткое описание услуги", "./img/demo-png.png")
