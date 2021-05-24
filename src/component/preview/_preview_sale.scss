@@ -6,9 +6,14 @@
     max-height: 250px;
 
     background: $white;
+    color: $black;
     border: 1px solid $border-color;
+    border-left: 4px solid $red;
+
+    padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+
     box-sizing: border-box;
-    box-shadow: 0px 6px 12px rgba(35, 31, 32, 0.08), 0px 32px 16px rgba(35, 31, 32, 0.04);
+    // box-shadow: 0px 6px 12px rgba(35, 31, 32, 0.08), 0px 32px 16px rgba(35, 31, 32, 0.04);
 
     &__intro{
         flex-grow: 1;
@@ -22,11 +27,12 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .preview_sale{
+        padding: $spacer;
         max-height: 200px;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .preview_sale{
-        max-height: 230px;
+        max-height: 160px;
     }
 }

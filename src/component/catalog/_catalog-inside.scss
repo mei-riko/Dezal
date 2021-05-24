@@ -3,9 +3,11 @@
     &__first-screen{
         padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
         background: $light-grey;
+        border: 1px solid $border-color;
     }
     &__advantage{
-        padding: map-get($map: $spacers, $key: 3) map-get($map: $spacers, $key: 4);
+        margin-top: map-get($map: $spacers, $key: 2);
+        padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 4);
         border: 1px solid $border-color;
 
         &-item{
@@ -16,17 +18,17 @@
             justify-content: space-between;
         }
         &-img{
-            flex: 0 0 60px;
-            max-width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            flex: 0 0 30px;
+            max-width: 30px;
+            height: 30px;
+            // border-radius: 50%;
 
-            background: $light-grey no-repeat center / contain;
-            border: 1px solid $border-color;
+            background: $white no-repeat center / contain;
+            // border: 1px solid $border-color;
         }
         &-content{
-            flex: 0 0 calc(100% - 80px);
-            max-width: calc(100% - 80px);
+            flex: 0 0 calc(100% - 50px);
+            max-width: calc(100% - 50px);
 
             line-height: $line-height-heading;
         }
@@ -39,17 +41,20 @@
         display: inline;
         margin-right: $spacer;
     }
+    &__price{
+        display: inline;
+        white-space: nowrap;
+    }
     &__old-price{
         display: inline-block;
 
         font-family: $font-family-base;
         font-size: 18px;
-        font-weight: $font-weight-bold;
         line-height: $line-height-heading;
 
         text-decoration: line-through;
-        color: $blue;
-        margin-right: $spacer/2;
+        color: $grey;
+        margin-right: $spacer/4;
     }
     &__new-price{
         display: inline-block;
@@ -61,8 +66,7 @@
 
         text-transform: uppercase;
 
-        background: $blue;
-        color: $white;
+        color: $red;
         padding: 4px 8px;
     }
     &__content-image{
@@ -104,6 +108,9 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .catalog-inside{
+        &__first-screen{
+            // border: none;
+        }
         &__advantage{
             padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
         }
@@ -113,7 +120,8 @@
     .catalog-inside{
         // Blocks
         &__first-screen{
-            padding: map-get($map: $spacers, $key: 2) 0;
+            border: none;
+            padding: map-get($map: $spacers, $key: 2) 0 map-get($map: $spacers, $key: 3);
         }
         // Elements
         &__title-block{

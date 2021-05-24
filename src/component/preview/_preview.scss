@@ -4,12 +4,17 @@
     &__title{
         font-size: map-get($map: $font-size, $key: "xl");
         font-weight: $font-weight-bolder;
-        line-height: $line-height-base;
+        line-height: $line-height-heading;
 
+        color: $dark-blue;
         margin-bottom: $spacer/2;
 
         position: relative;
         z-index: 11;
+
+        &_sale{
+            color: $black;
+        }
 
         &_lead{
             font-size: 18px;
@@ -18,7 +23,7 @@
     &__intro{
         position: relative;
         z-index: 11;
-        color: $black;
+        // color: $black;
     }
     &__link{
         font-weight: $font-weight-bolder;

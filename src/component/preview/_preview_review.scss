@@ -76,6 +76,9 @@
     &__image{
         height: 240px;
         background: no-repeat top center / cover;
+
+        margin: 0 $spacer $spacer;
+        border: 1px solid $border-color;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){

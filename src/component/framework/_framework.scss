@@ -1,4 +1,5 @@
 html,body {
+    font-family: $font-family-base;
     font-size: map-get($font-size, 'lg');
     font-weight: $font-weight-base;
     line-height: $line-height;
@@ -35,7 +36,7 @@ h1, h2, h3, h4, h5, h6,
     font-size: 200px;
     font-weight: $font-weight-bold;
     line-height: 190px;
-    color: $yellow;
+    color: $blue;
 }
 
 p {
@@ -127,7 +128,8 @@ table{
     &-white{background-color: $white;}
     &-light{background-color: $light-grey;}
     &-secondary{background-color: $bg-secondary;}
-    &-dark{background-color: $bg-dark;}
+    &-dark{background-color: $bg-dark; color: $white;}
+    &-blue{background-color: $dark-blue; color: $white;}
 }
 
 .p-relative{position: relative;}

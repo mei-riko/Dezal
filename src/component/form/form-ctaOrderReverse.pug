@@ -1,13 +1,12 @@
-.form-cta.bg-secondary
+.form-cta.bg-blue
     .container
-        .row.justify-content-center
-            .col-7.col-sm-12.col-xs-12
-                p.form-cta__title.h1 Нужна бесплатная консультация?
+        .row.justify-content-center.justify-content-lg-around.justify-content-md-center.align-items-center
+            .col-8.col-md-9.col-xs-12
+                p.h1.form-cta__title Позаботьтесь об&nbsp;имуществе и&nbsp;здоровье
                 p.form-cta__intro Компания предоставляет услуги по&nbsp;дезинфекции, дезинсекции и&nbsp;дератизации по&nbsp;Санкт-Петербургу более 7 лет. 
                 form.form.form_inline.form-cta__form(action="")
                     input.input(type="text" placeholder="Ваше имя")
                     input.input.input_phone(type="tel" placeholder="Телефон")
-                    button.btn.btn_action(type="submit") Заказать обработку
-            .col-4.col-lg-5.p-relative.d-sm-none
-                .form-cta__image.form-cta__image_consultation
-                    img.form-cta__icon(src="./icon/icon-cta.svg")
+                    button.btn.btn_secondary(type="submit") Заказать обработку
+            .col-2.col-md-3.p-relative.d-sm-none
+                .form-cta__image.form-cta__image_inverse

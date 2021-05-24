@@ -7,11 +7,11 @@
     }
 }
 
-@media all and (max-width: map-get($grid-breakpoints, 'md')){
+@media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .slider_advantage{
         &:not(.owl-loaded){
             .slider__item{
-                @extend .col-md-6;
+                @extend .col-lg-6;
             }
         }
     }

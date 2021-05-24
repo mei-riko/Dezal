@@ -1,0 +1,10 @@
+.btn_secondary{
+    border-color: $red;
+    background: $red;
+    color: $white;
+
+    &:hover, &:focus{
+        background: lighten($color: $red, $amount: 10);
+        color: $white;
+    }
+}

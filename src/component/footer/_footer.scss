@@ -38,7 +38,7 @@
         margin-bottom: 4px;
 
         &:hover{
-            color: $yellow;
+            color: lighten($blue,5);
             text-decoration: none;
         }
     }
@@ -50,7 +50,7 @@
         color: $grey;
 
         &:hover{
-            color: $yellow;
+            color: lighten($blue,5);
         }
     }
     &__text{

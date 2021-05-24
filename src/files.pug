@@ -6,7 +6,7 @@ html(lang="ru")
         title FAQ
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet")
 
         link(href='./css/style.css', rel='stylesheet')
 
@@ -14,8 +14,8 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         include component/mixin.pug
-        //- Inside Offset Top 20
-        section.container.pt-2
+        //- Inside Offset Top 40-60
+        section.container.pt-3.pb-4.pt-sm-2.pb-sm-3
             h1.mb-0 Полезные файлы
             .row
                 .col-4.col-xs-12.col-md-6.mt-3
@@ -43,23 +43,23 @@ html(lang="ru")
                 a.pagination__item(href="#") 2
                 span.pagination__item.pagination__item--active 3
                 a.pagination__item(href="#") 4
-        include component/form/form-ctaConsultation.pug
+        include component/form/form-ctaOrder.pug
         //- Акции 40-40
-        aside.pt-3.pb-3.pb-sm-2
+        section.pt-3.pb-3.bg-light
             .container
-                h4.text-uppercase.mb-1.pb-1.mb-sm-2.pb-sm-0 Актуальные акции
+                h3.mb-1.pb-1.mb-sm-2.pb-sm-0 Наши актуальные акции
             .container-fluid.container-sm-fluid.container-xs-fluid
                 include component/preview/sales.pug
         //- Другие направления 40-40
-        aside.pt-3.pb-3.pt-sm-2
+        aside.pt-3.pb-3.bg-blue
             .container
-                h4.h2 Популярные направления
+                h4 Популярные направления
             .container-fluid.container-sm-fluid.container-xs-fluid
                     .slider-container
                         .slider.slider_advantage
-                            +advantage("Название услуги", "здесь краткое описание услуги", "./img/demo-png.png")
-                            +advantage("Название услуги", "здесь краткое описание услуги", "./img/demo-png.png")
-                            +advantage("Название услуги", "здесь краткое описание услуги", "./img/demo-png.png")
+                            +advantage("Название услуги", "здесь краткое описание услуги")(style="background-image:url('./img/child.jpg');")
+                            +advantage("Название услуги", "здесь краткое описание услуги")(style="background-image:url('./img/child.jpg');")
+                            +advantage("Название услуги", "здесь краткое описание услуги")(style="background-image:url('./img/child.jpg');")
         .toggle.toggle_page
             .toggle__title.toggle__title_page(data-show="Читать подробнее про компанию" data-hide="Скрыть подробности")
                 .container Читать подробнее про компанию

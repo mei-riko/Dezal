@@ -6,8 +6,8 @@ html(lang="ru")
         title Contact Page
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet")
-
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet")
+        
         link(href='./css/style.css', rel='stylesheet')
 
         script(src="https://api-maps.yandex.ru/2.1/?apikey=11c69411-183a-4194-9298-5ec601249544&lang=ru_RU" type="text/javascript")
@@ -15,12 +15,12 @@ html(lang="ru")
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
         include component/mixin.pug
-        //- Inside Offset Top 20
-        section.container.pt-2
-            .row.mb-3
+        //- Inside Offset Top 40-60
+        section.container.pt-3.pb-4.pt-sm-2.pb-sm-3
+            .row.mb-2
                 .col-8.col-lg-7.col-md-12
                     h1.mb-1.pb-1.mb-sm-2.pb-sm-0 Контактная информация
-                    .row
+                    .row.align-items-center
                         .col-6.col-xs-12.mb-3.mb-lg-2.mb-xs-1
                             ul.list
                                 li.list__item Телефон для связи: 
@@ -74,8 +74,8 @@ html(lang="ru")
                     form.form.form_block(action="")
                         input.input.input--full.mb-1(type="text" placeholder="Ваше имя")
                         input.input.input--full.input_phone.mb-1(type="tel" placeholder="Телефон")
-                        button.btn.btn--full.btn_action(type="submit") Заказать обработку
-            .map.mb-5#map
+                        button.btn.btn--full.btn_secondary(type="submit") Заказать обработку
+            .map#map
         .toggle.toggle_page
             .toggle__title.toggle__title_page(data-show="Читать подробнее про компанию" data-hide="Скрыть подробности")
                 .container Читать подробнее про компанию

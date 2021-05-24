@@ -7,16 +7,20 @@
     text-align: center;
 
     &__num{
-        line-height: 60px;
+        line-height: 52px;
         width: 60px;
         border-radius: 30px;
 
         margin: 0 auto 30px;
 
-        background: $black;
-        color: $white;
+        background: $white;
+        color: $red;
+        border: 4px solid $red;
         font-weight: $font-weight-bold;
         font-size: 22px;
+    }
+    &__title{
+        color: $black;
     }
     &__intro{
         width: 320px;
@@ -26,17 +30,30 @@
 }
 
 .preview_step-final{
-    background-color: $light-grey;
-
+    position: relative;
     display: grid;
     grid-gap: map-get($map: $spacers, $key: 3);
-    grid-template-columns: 120px 200px 1fr;
+    grid-template-columns: 200px 1fr;
+    padding-left: 220px;
+
+    background-color: $red;
+    color: $white;
 
     width: 920px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 
+    &__img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 190px;
+        height: 100%;
+
+        background: no-repeat center / cover;
+        clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+    }
     &__title{
         font-size: 22px;
         line-height: 28px;
@@ -44,7 +61,6 @@
 
         margin-bottom: $spacer/2;
     }
-
     &__intro{
         margin-top: $spacer/2;
     }
@@ -52,6 +68,9 @@
         margin-top: $spacer/2;
     }
 
+    .list__item:before{
+        background-color: $white;
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .preview_step{
@@ -65,7 +84,7 @@
         padding: 0 $spacer/2;
 
         &__num{
-            line-height: 40px;
+            line-height: 32px;
             width: 40px;
             border-radius: 20px;
 
@@ -77,7 +96,7 @@
     }
     .preview_step-final{
         grid-gap: $spacer;
-        grid-template-columns: 100px 180px 1fr;
+        grid-template-columns: 180px 1fr;
 
         &__title {
             font-size: 17px;
@@ -92,8 +111,17 @@
     }
     .preview_step-final{
         grid-gap: $spacer;
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 200px 1fr;
 
+        position: relative;
+        padding: $spacer;
+
+        &__img{
+            display: none;
+        }
+        &__intro{
+            margin-top: 0;
+        }
         &__title{
             margin-bottom: 0;
         }
@@ -124,19 +152,10 @@
     }
     .preview_step-final{
         position: relative;
-        
-        padding: 0;
-        padding-left: 60px;
-
-        background-color: inherit;    
         display: block;
 
         &__img{
-            width: 40px;
-
-            position: absolute;
-            left: 0;
-            top: 0;
+            display: none;
         }
         &__title{
             font-size: 16px;

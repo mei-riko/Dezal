@@ -6,15 +6,15 @@ html(lang="ru")
         title Text Page
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet")
 
         link(href='./css/style.css', rel='stylesheet')
 
     body
         script(src="http://code.jquery.com/jquery-3.3.1.min.js")
         include component/header/header.pug
-        //- Inside Offset Top 20
-        section.container.pt-2.pb-2.pb-sm-0
+        //- Inside Offset Top 40-60
+        section.container.pt-3.pb-4.pt-sm-2.pb-sm-3
             h1 Заголовок h1
             ul.breadcrumbs.mb-1.pb-1
                 li.breadcrumbs__item
@@ -52,7 +52,7 @@ html(lang="ru")
                         tr
                             td Значение 3
                             td Значение 4
-        include component/form/form-ctaConsultation.pug
+        include component/form/form-ctaOrder.pug
         include component/footer/footer.pug
 
         link(href="./css/jquery.fancybox.min.css", rel='stylesheet')

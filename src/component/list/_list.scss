@@ -5,20 +5,21 @@
 
     &__item{
         position: relative;
-        padding-left: 28px;
+        padding-left: 22px;
         margin-bottom: 4px;
 
         &:before{
             content:'';
             display: block;
 
-            width: 8px;
-            height: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 3px;
 
-            background: $yellow;
+            background: $red;
 
             position: absolute;
-            top: .5em;
+            top: .65em;
             left: 0;
         }
 

@@ -7,12 +7,12 @@
         flex-wrap: wrap;
         align-items: center;
 
-
         padding: $spacer/2 0;
-        border-bottom: 1px solid $border-color;
     }
     &__navbar{
-        padding: 25px 0;
+        background-color: $dark-blue;
+        color: $white;
+        padding: $spacer/2 0;
     }
     // Elements
     &__nav-toggle{
@@ -24,7 +24,7 @@
         width: 185px;
         height: 40px;
 
-        background: url('../icon/logo-descriptor.svg') no-repeat left center / contain;
+        background: url('../icon/logo-full.svg') no-repeat left center / contain;
     }
     &__sublink{
         flex-grow: 1;
@@ -39,7 +39,7 @@
         }
     }
     &__contact{
-        flex: 0 0 185px;
+        flex: 0 0 230px;
         text-align: right;
 
         display: flex;
@@ -53,23 +53,39 @@
     &__messenger{
         margin-left: 5px;
     }
+    &__location{
+        width: 24px;
+        margin-left: $spacer;
+    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .header{
         &__logo{
             background-image: url('../icon/logo-full.svg');  
 
-            flex: 0 0 120px;
-            width: 120px;
-            height: 18px;
+            flex: 0 0 160px;
+            width: 160px;
+            height: 30px;
         }
         &__sublink{
-            padding-left: $spacer;
+            padding-left: $spacer/2;
+        }
+        &__contact{
+            flex: 0 0 160px;
+            max-width: 160px;
+        }
+        &__messenger{
+            display: none;
         }
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .header{
+        &__logo{
+            flex: 0 0 140px;
+            width: 140px;
+            height: 26px;
+        }
         &__nav-toggle{
             display: block;
             flex: 0 0 40px;
@@ -96,7 +112,11 @@
             display: none;
         }
         &__contact{
-            flex: 0 0 calc(100% - 160px);
+            flex: 0 0 calc(100% - 200px);
+            max-width: calc(100% - 200px);
+        }
+        &__messenger{
+            display: inline-block;
         }
     }
 }
@@ -106,9 +126,15 @@
             font-size: map-get($map: $font-size, $key: "md");
             margin-right: 0;
         }
+        &__contact{
+            flex: 0 0 calc(100% - 180px);
+            max-width: calc(100% - 180px);        
+        }
         &__messenger{
             display: none;
         }
-        
+        &__location{
+            display: none;
+        }
     }
 }

@@ -6,7 +6,7 @@ html(lang="ru")
         title 404
         
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet")
 
         link(href='./css/style.css', rel='stylesheet')
     body
@@ -15,15 +15,15 @@ html(lang="ru")
         include component/mixin.pug
         main 
             //- Main section 80-80
-            section.container.text-center.mt-5.mb-5
+            section.container.text-center.mt-5.mb-5.mt-sm-3.mb-sm-3
                 a(href="index.html" title="") 
-                    img.img-fluid.mb-5(src="./icon/logo-full.svg" alt="" title="" width="120px" style="margin-left: auto; margin-right: auto;")
+                    img.img-fluid.mb-5(src="./icon/logo-full.svg" alt="" title="" width="220px" style="margin-left: auto; margin-right: auto;")
                 h1.heading-error 404
                 p.lead.text-bolder.mb-0 Такой страницы нет
                 p Но есть много других полезных страниц 
-            aside.container-fluid.container-sm-fluid.container-xs-fluid
+            aside.container-fluid.container-sm-fluid.container-xs-fluid.mb-5.mb-sm-3
                 include component/preview/sales.pug
-        include component/form/form-ctaConsultation.pug
+        include component/form/form-ctaOrder.pug
         include component/footer/footer.pug
 
         link(href="./css/jquery.fancybox.min.css", rel='stylesheet')

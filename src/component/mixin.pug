@@ -1,26 +1,16 @@
-//- mixin advantage(name, id)
-//-     .col-4.col-lg-6.col-sm-4
-//-         a.advantage.advantage_modal(data-fancybox="advantage" data-src=id href="javascript;")
-//-             span.advantage__button
-//-                 svg.advantage__icon(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
-//-                     path(d="M15 13H14V10.7L7.3 17.4L6.6 16.7L13.3 10H11V9H15V13ZM20 16H11L12 15H19V5H9V12L8 13V4H20V16ZM6 9V10H4V20H14V18H15V21H3V9H6Z" fill="#EF002B")
-//-             h4.advantage__title= name
-//-             if block
-//-                 block
-//-             else
-//-                 p.advantage__intro Lorem ipsum dolor sit amet. Itaque earum rerum facilis est laborum. Esse, quam nihil molestiae non recusandae.
 mixin sale(title, intro, link)
     .preview.preview_sale
         p.preview__title.preview__title_sale= title
         p.preview__intro.preview_sale__intro= intro
-        a.btn.btn--full.btn_details(href="text.html")= link
+        if link!=''
+            a.btn.btn--full.btn_details(href="text.html")= link
 mixin service(title, link)
     a.preview.preview_service(href=link)
         .preview_service__img(style=attributes.style class=attributes.class)
         span= title
-mixin advantage(title, intro, image)
+mixin advantage(title, intro)
     .slider__item
         .preview.preview_advantage
             p.preview__title!= title
             p.preview__intro!= intro
-            img.preview_advantage__img(src=image alt=title title=title)
+            .preview_advantage__img(style=attributes.style alt=title title=title)

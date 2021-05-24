@@ -25,11 +25,16 @@
                 height: 6px;
                 margin-left: 6px;
 
-                background: url('../icon/arrow-down.svg') no-repeat center / contain;
+                background: url('../icon/arrow-down-white.svg') no-repeat center / contain;
             }
         }
     }
-
+    &__link{
+        color: $white;
+        &:hover{
+            color: $grey;
+        }
+    }
     &__children{
         display: none;
 

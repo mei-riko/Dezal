@@ -6,7 +6,7 @@ html(lang="ru")
         title Дезинсекция
 
         link(rel="preconnect" href="https://fonts.gstatic.com")
-        link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet")
 
         link(href='./css/style.css', rel='stylesheet')
 
@@ -15,22 +15,21 @@ html(lang="ru")
         include component/header/header.pug
         include component/mixin.pug        
         //- Первый экран 20-40
-        section.catalog.container.pt-2.pb-3.pb-md-2.pb-sm-0
+        section.catalog.container.pt-2.pb-4.pb-sm-3
             //- Заглавный экран
-            .catalog__first-screen
-                .catalog__image
+            .catalog__first-screen(style="background-image: url('./img/dezinsector.jpg');")
+                //- .catalog__image
                     img.img-fluid(src="./img/cta-order.png")
                 .catalog__intro
                     h1.catalog__intro-title Дезинсекция
                     p.catalog__intro-content Анонимное уничтожение любых насекомых через 2 часа с гарантиями в официальном договоре
-                .catalog__advantage 
                     ul.list 
                         li.list__item Выезд 24/7 в любое время
                         li.list__item Не вызывает аллергии
                         li.list__item Безопасно для детей и животных
                         li.list__item Сертифицированные препараты
                         li.list__item Стоимость фиксируется во время звонка
-                    a.btn.btn_action.btn--full(href="javascript:;" data-fancybox="order" data-src="#orderModal") Заказать обработку
+                    a.btn.btn_secondary.btn--full(href="javascript:;" data-fancybox="order" data-src="#orderModal") Заказать обработку
             //- Контент страницы 60
             .content.mt-4.mt-sm-3
                 p Maxime placeat, facere possimus, omnis voluptas nulla vero eos. Quam nihil molestiae non recusandae corrupti, quos dolores eos, qui. Id est eligendi optio, cumque nihil impedit, quo minus id, quod maxime. Eligendi optio, cumque nihil molestiae consequatur, vel illum. Temporibus autem quibusdam et expedita distinctio. Saepe eveniet, ut perspiciatis, unde omnis dolor. Provident, similique sunt in ea commodi autem quibusdam et voluptates repudiandae sint.
@@ -52,25 +51,32 @@ html(lang="ru")
                 +service("Блохи", "service.html")(class="preview_service__img_default")
                 +service("Сколопендры", "service.html")(class="preview_service__img_default")
         include component/form/form-ctaOrder.pug
-        //- Гарантии и преимущества 40-80
-        section.pt-5.pb-3.pt-md-4.pt-sm-3.pb-sm-2
+        //- Преимущества 60-60
+        section.pt-4.pt-sm-3.pb-4.pb-sm-3
             .container
-                h2.mb-2 Что Альянс гарантирует своим клиентам?
+                h2.h3 Что Альянс гарантирует своим клиентам?
             .container-fluid.container-sm-fluid.container-xs-fluid
-                .slider-container
+                .slider-container.mt-2
                     .slider.slider_advantage
-                        +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений", "./img/demo-png.png")
-                        +advantage("Анонимность", "для&nbsp;всех соседей и&nbsp;компаний", "./img/demo-png.png")
-                        +advantage("Профессионализм", "сертифицированных специалистов", "./img/demo-png.png")
-                        +advantage("Чистоту", "и&nbsp;отсутствие запаха препаратов", "./img/demo-png.png")
-                        +advantage("Гипоаллергенность", "применяемых препоратов", "./img/demo-png.png")
-                        +advantage("Сохранность", "мебели и&nbsp;напольных покрытий", "./img/demo-png.png")
-        //- Акции 40-80
-        section.pt-3.pb-5.pt-md-2.pb-md-4.pt-sm-2.pb-sm-3
+                        +advantage("Безопасность", "для&nbsp;детей, животных и&nbsp;растений")(style="background-image:url('./img/child.jpg');")
+                        +advantage("Анонимность", "для&nbsp;всех соседей и&nbsp;компаний")(style="background-image:url('./img/neighbor.jpg');")
+                        +advantage("Профессионализм", "сертифицированных специалистов")(style="background-image:url('./img/dezinsector.jpg');")
+                        +advantage("Чистоту", "и&nbsp;отсутствие запаха препаратов")(style="background-image:url('./img/clean.jpg');")
+                        +advantage("Гипоаллергенность", "применяемых препоратов")(style="background-image:url('./img/green-safe.jpg');")
+                        +advantage("Сохранность", "мебели и&nbsp;напольных покрытий")(style="background-image:url('./img/home.jpg');")
+        //- Акции 40-40
+        section.pt-3.pb-3.bg-blue
             .container
-                h4.text-uppercase.mb-1.pb-1.mb-sm-2.pb-sm-0 Актуальные акции
+                h3.mb-1.pb-1.mb-sm-2.pb-sm-0 Наши актуальные акции
             .container-fluid.container-sm-fluid.container-xs-fluid
                 include component/preview/sales.pug
+        .toggle.toggle_page
+            .toggle__title.toggle__title_page(data-show="Читать подробнее про компанию" data-hide="Скрыть подробности")
+                .container Читать подробнее про компанию
+            .toggle__content.toggle__content_page
+                .container.content
+                    p Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.
+                    p Quo voluptas sit, amet, consectetur, adipisci velit, sed quia voluptas. Veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut enim ipsam. Esse, quam nihil impedit, quo voluptas. Eaque ipsa, quae ab illo inventore veritatis et voluptates.
         include component/footer/footer.pug
 
         link(href="./css/jquery.fancybox.min.css", rel='stylesheet')

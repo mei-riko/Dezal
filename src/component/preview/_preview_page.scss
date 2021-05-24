@@ -2,11 +2,25 @@
     border: 1px solid $border-color;
     background: $white;
 
+    padding: $spacer;
+
     &__title{
         margin-bottom: $spacer/4;
     }
     &__intro{
         color: $dark-grey;
         margin-bottom: $spacer/2;
+    }
+    &__link{
+        padding: 8px 14px;
+        background: $blue;
+        color: $white;
+        line-height: $line-height-heading;
+
+        &:hover{
+            background: $dark-blue;
+            color: $white;
+            text-decoration: none;
+        }
     }
 }

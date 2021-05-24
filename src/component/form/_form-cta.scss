@@ -1,7 +1,7 @@
 .form-cta{
     position: relative;
     padding: map-get($map: $spacers, $key: 4) 0;
-    margin-top: map-get($map: $spacers, $key: 4);
+    // margin-top: map-get($map: $spacers, $key: 4);
 
     &__intro{
         width: 540px;
@@ -12,26 +12,20 @@
         max-width: 100%;
     }
     &__image{
-        position: absolute;
+        // position: absolute;
         max-width: 100%;
+        width: 140px;
+        height: 140px;
 
-        &_consultation{
-            left: 40px;
-            bottom: -60px;
-            width: 275px;
-            height: 310px;
-    
-            background: url('../img/phone.png') no-repeat center bottom / contain;
-        }
-        &_order{
-            left: 0px;
-            bottom: -85px;
-            width: 240px;
-            height: calc( 100% + 170px);
-    
-            background: url('../img/cta-order.png') no-repeat center bottom / contain;
-        }
+        background: url('../icon/cta-image-icon.svg') no-repeat center / contain;
         
+        &_inverse{
+            background: url('../icon/cta-image-icon-inverse.svg') no-repeat center / contain;
+        }
+        &_consultation{
+            // left: 40px;
+            // bottom: -60px;
+        }        
     }
     &__icon{
         position: absolute;
@@ -45,7 +39,7 @@
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
     .form-cta{
-        margin-top: map-get($map: $spacers, $key: 3);
+        // margin-top: map-get($map: $spacers, $key: 3);
 
         &__image{
             &_order{
@@ -61,11 +55,7 @@
         padding: map-get($map: $spacers, $key: 3) 0;
 
         &__title{
-            width: 300px;
-            max-width: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: map-get($map: $spacers, $key: 3);
+            margin-bottom: map-get($map: $spacers, $key: 2);
 
             position: relative;
             z-index: 11;
@@ -79,23 +69,6 @@
 
             display: flex;
             flex-direction: column;
-        }
-
-        &:after{
-            content: '';
-            display: block;
-            width: 200px;
-            height: 200px;
-
-            max-width: 100%;
-
-            background: url('../icon/sign.svg') no-repeat top center / contain;
-
-            position: absolute;
-            top: $spacer;
-            left: 50%;
-
-            transform: translateX(-50%);
         }
     }
 }

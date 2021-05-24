@@ -1,10 +1,10 @@
 .btn_action{
-    border-color: $yellow;
-    background: $yellow;
-    color: $black;
+    border-color: $blue;
+    background: $blue;
+    color: $white;
 
     &:hover, &:focus{
-        background: darken($color: $yellow, $amount: 10);
-        color: $black;
+        background: darken($color: $blue, $amount: 10);
+        color: $white;
     }
 }
