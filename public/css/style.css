@@ -1975,6 +1975,10 @@ ol:last-child, ul:last-child {
   margin-bottom: 0;
 }
 
+ol {
+  padding-left: 1em;
+}
+
 a {
   display: inline-block;
   outline: none;
@@ -1991,6 +1995,7 @@ a:hover, a:focus {
 
 table {
   font-size: 1rem;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -3773,6 +3778,21 @@ a.preview_advantage:hover {
   text-decoration: none;
 }
 
+.preview_column {
+  background: #ffffff;
+  color: #1E1E1E;
+  border: 1px solid #ECEEF0;
+  padding: 20px 40px;
+  height: 100%;
+}
+
+@media all and (max-width: 576px) {
+  .preview_column {
+    height: auto;
+    height: intrinsic;
+  }
+}
+
 .tabs__nav {
   margin-bottom: 40px;
   width: 100%;
@@ -4440,7 +4460,7 @@ a.preview_advantage:hover {
 }
 
 .catalog__first-screen {
-  background: #ECEEF0 no-repeat top left/cover;
+  background: #ECEEF0 no-repeat center left/contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

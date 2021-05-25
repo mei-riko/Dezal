@@ -4,7 +4,7 @@ if( $(".map#map").length  > 0 ){
     function init(){
         // Создание карты.
         let myMap = new ymaps.Map("map", {
-            center: [59.936846, 30.312176],
+            center: [59.889038, 30.278274],
             zoom: 14,
             controls: ['fullscreenControl'],
         });
@@ -26,7 +26,7 @@ if( $(".map#map").length  > 0 ){
             fromEnabled: true,
             from: '',
             toEnabled: false,
-            to: 'Санкт-Петербург, Невский проспект, дом 1'
+            to: 'Санкт-Петербург, ул. Маршала Говорова, д.35'
         });
         // Опции панели для построения машрутов.
         control.routePanel.options.set({

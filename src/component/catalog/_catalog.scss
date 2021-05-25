@@ -1,7 +1,7 @@
 .catalog{
     &__first-screen{
         // border: 1px solid $border-color;
-        background: $border-color no-repeat top left / cover;
+        background: $border-color no-repeat center left / contain;
         display: flex;
         justify-content: flex-end;
         align-items: center;

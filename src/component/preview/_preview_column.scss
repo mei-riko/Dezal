@@ -1,0 +1,16 @@
+.preview_column{
+    background: $white;
+    color: $black;
+    border: 1px solid $border-color;
+
+    padding: map-get($map: $spacers, $key: 2) map-get($map: $spacers, $key: 3);
+
+    height: 100%;
+}
+
+@media all and (max-width: map-get($grid-breakpoints, 'xs')){
+    .preview_column{
+        height: auto;
+        height: intrinsic;
+    }
+}

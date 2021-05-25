@@ -57,6 +57,10 @@ ol, ul{
     }
 }
 
+ol{
+    padding-left: 1em;
+}
+
 a{
     display: inline-block;
     outline: none;
@@ -71,6 +75,7 @@ a{
 }
 table{
     font-size: 1rem;
+    width: 100%;
     margin-bottom: map-get($spacers, 2);
 
     &:last-child{
