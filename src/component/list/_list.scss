@@ -22,9 +22,14 @@
             top: .65em;
             left: 0;
         }
-
         &:last-child{
             margin-bottom: 0;
+        }
+
+        &_light{
+            &:before{
+                background: $grey;
+            }
         }
     }
 }

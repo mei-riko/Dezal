@@ -26,6 +26,11 @@ a.preview_advantage{
         background: darken($color: $light-grey, $amount: 6);
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'sm')){
+    .preview_advantage{
+        max-height: 140px;
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .preview_advantage{
         height: auto;

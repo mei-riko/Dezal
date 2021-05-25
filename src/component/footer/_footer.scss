@@ -81,6 +81,13 @@
         }
     }
 }
+@media all and (max-width: map-get($grid-breakpoints, 'md')){
+    .footer{
+        &__phone{
+            font-size: 18px;
+        }
+    }
+}
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .footer{
         padding: map-get($map: $spacers, $key: 3) 0;

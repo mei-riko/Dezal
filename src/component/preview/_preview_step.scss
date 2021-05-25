@@ -67,10 +67,6 @@
     &__content{
         margin-top: $spacer/2;
     }
-
-    .list__item:before{
-        background-color: $white;
-    }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'lg')){
     .preview_step{

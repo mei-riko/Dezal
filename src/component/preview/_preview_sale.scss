@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    max-height: 250px;
+    // max-height: 250px;
+    max-height: 160px;
 
     background: $white;
     color: $black;
@@ -28,11 +29,11 @@
 @media all and (max-width: map-get($grid-breakpoints, 'sm')){
     .preview_sale{
         padding: $spacer;
-        max-height: 200px;
+        max-height: 140px;
     }
 }
-@media all and (max-width: map-get($grid-breakpoints, 'xs')){
-    .preview_sale{
-        max-height: 160px;
-    }
-}
+// @media all and (max-width: map-get($grid-breakpoints, 'xs')){
+//     .preview_sale{
+//         max-height: 160px;
+//     }
+// }

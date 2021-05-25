@@ -31,7 +31,7 @@
     }
     &__link{
         color: $white;
-        &:hover{
+        &:hover, &:focus{
             color: $grey;
         }
     }
@@ -142,13 +142,18 @@
                 margin-bottom: 0;
             }
             .navbar__link{
-                color: $text-grey;
+                color: $light-grey;
             }
             .navbar__phone{
                 display: block;
+                color: $light-grey;
+
                 font-size: 16px;
                 font-weight: $font-weight-bold;
                 margin: $spacer/2 0;
+            }
+            .navbar__messenger{
+                color: $light-grey;
             }
         }
     }
