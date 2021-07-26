@@ -48,6 +48,14 @@
         &_page{
             background-color: $bg-dark;
             color: $white;
+
+            .link-inverse{
+                color: $yellow;
+
+                &:hover, &:focus{
+                    color: $white;
+                }
+            }
         }
         &_faq{
             border: 1px solid $border-color;

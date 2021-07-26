@@ -54,6 +54,12 @@ ol, ul{
     &:last-child{
         margin-bottom: 0;
     }
+
+    li{
+        a{
+            display: inline;
+        }
+    }
 }
 
 a{

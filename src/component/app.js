@@ -4,7 +4,7 @@ import '../component/tabs/tabs';
 import '../component/input/input';
 import '../component/modal/modal';
 import '../component/slider/slider-owl';
-import '../component/map/map';
+// import '../component/map/map';
 import '../component/toggle/toggle';
 import '../component/navbar/nav';
 
