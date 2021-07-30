@@ -49,13 +49,62 @@
     &__phone{
         font-weight: $font-weight-bolder;
         margin-right: 5px;
+        white-space: nowrap;
     }
     &__messenger{
         margin-left: 5px;
     }
     &__location{
-        width: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
         margin-left: $spacer;
+
+        &-country{
+            width: 24px;
+        }
+        &-changer{
+            position: relative;
+            margin-left: $spacer/2;
+        }
+        &-link{
+            color: $red;
+            border-bottom: 1px dashed;
+            line-height: $line-height-heading;
+            white-space: nowrap;
+
+            &:hover, &:focus{
+                text-decoration: none;
+            }
+        }
+
+        &-popover {
+            position: absolute;
+            top: 24px;
+            right: 0;
+            z-index: 12;
+
+            text-align: center;
+            width: 120px;
+            padding: 12px;
+
+            background: $white!important;
+            border: 1px solid $border-color;
+        }
+
+        &-confirm {
+            color: $dark-grey;
+            border-bottom: 1px dashed;
+            line-height: $line-height-base;
+            margin: 4px 6px;
+
+            &:hover, &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+    .userlocation-location-confirm:not(.unconfirmed) .userlocation-location-confirm-popover {
+        display: none;
     }
 }
 @media all and (max-width: map-get($grid-breakpoints, 'md')){
@@ -79,6 +128,12 @@
         }
         &__messenger{
             display: none;
+        }
+        &__location{
+            margin-left: 0;
+            &-country{
+                display: none;
+            }
         }
     }
 }
@@ -128,14 +183,12 @@
 @media all and (max-width: map-get($grid-breakpoints, 'xs')){
     .header{
         &__phone{
-            font-size: map-get($map: $font-size, $key: "md");
-            margin-right: 0;
+            display: none;
+            // font-size: map-get($map: $font-size, $key: "md");
+            // margin-right: 0;
         }
 
         &__messenger{
-            display: none;
-        }
-        &__location{
             display: none;
         }
     }

@@ -4141,6 +4141,7 @@ a.preview_advantage:hover {
 .header__phone {
   font-weight: 600;
   margin-right: 5px;
+  white-space: nowrap;
 }
 
 .header__messenger {
@@ -4148,8 +4149,63 @@ a.preview_advantage:hover {
 }
 
 .header__location {
-  width: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-left: 20px;
+}
+
+.header__location-country {
+  width: 24px;
+}
+
+.header__location-changer {
+  position: relative;
+  margin-left: 10px;
+}
+
+.header__location-link {
+  color: #9F2D20;
+  border-bottom: 1px dashed;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.header__location-link:hover, .header__location-link:focus {
+  text-decoration: none;
+}
+
+.header__location-popover {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  z-index: 12;
+  text-align: center;
+  width: 120px;
+  padding: 12px;
+  background: #ffffff !important;
+  border: 1px solid #ECEEF0;
+}
+
+.header__location-confirm {
+  color: #757575;
+  border-bottom: 1px dashed;
+  line-height: 1.4;
+  margin: 4px 6px;
+}
+
+.header__location-confirm:hover, .header__location-confirm:focus {
+  text-decoration: none;
+}
+
+.header .userlocation-location-confirm:not(.unconfirmed) .userlocation-location-confirm-popover {
+  display: none;
 }
 
 @media all and (max-width: 992px) {
@@ -4174,6 +4230,12 @@ a.preview_advantage:hover {
     max-width: 160px;
   }
   .header__messenger {
+    display: none;
+  }
+  .header__location {
+    margin-left: 0;
+  }
+  .header__location-country {
     display: none;
   }
 }
@@ -4227,13 +4289,9 @@ a.preview_advantage:hover {
 
 @media all and (max-width: 576px) {
   .header__phone {
-    font-size: 13px;
-    margin-right: 0;
-  }
-  .header__messenger {
     display: none;
   }
-  .header__location {
+  .header__messenger {
     display: none;
   }
 }
